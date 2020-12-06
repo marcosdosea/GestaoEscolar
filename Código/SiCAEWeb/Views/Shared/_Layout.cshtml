@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SiCAEWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <header>
+        <div class="w3-row"></div>
+        <!-- Menu Lateral -->
+        <div class="w3-bar-block w3-card w3-blue w3-quarter">
+            <p class="w3-bar-item"><i class="fa fa-user-circle-o" style="font-size:36px"></i>Nome do Usuário</p>
+
+            <a href="inicio.html" class="w3-bar-item w3-button w3-hover-indigo w3-border-bottom"><i style="font-size:24px" class="fa fa-home"></i> Início</a>
+
+            <button class="w3-button w3-block w3-left-align w3-hover-indigo w3-border-bottom" onclick="menu_Dir()">
+                <i class="fa fa-cogs"></i> Diretor <i class="fa fa-angle-down w3-right"></i>
+            </button>
+            <div id="acc_Dir" class="w3-bar-block w3-hide w3-white w3-card-4">
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-child"></i> Alunos</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-male"></i> Responsáveis</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-users"></i> Usuários</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-table"></i> Turmas</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-superscript"></i> Disciplinas</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-vcard-o"></i> Matrícula</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-wpforms"></i> Notícias</a>
+            </div>
+
+            <button class="w3-button w3-block w3-left-align w3-hover-indigo w3-border-bottom" onclick="menu_Sec()">
+                <i class="fa fa-file-text-o"></i> Secretário <i class="fa fa-angle-down w3-right"></i>
+            </button>
+            <div id="acc_Sec" class="w3-bar-block w3-hide w3-white w3-card-4">
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-child"></i> Alunos</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-male"></i> Responsáveis</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-table"></i> Turmas</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-superscript"></i> Disciplinas</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-vcard-o"></i> Matrícula</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-wpforms"></i> Notícias</a>
+            </div>
+
+            <button class="w3-button w3-block w3-left-align w3-hover-indigo w3-border-bottom" onclick="menu_Pro()">
+                <i class="fa fa-graduation-cap"></i> Professor <i class="fa fa-angle-down w3-right"></i>
+            </button>
+            <div id="acc_Pro" class="w3-bar-block w3-hide w3-white w3-card-4">
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-table"></i> Horários</a>
+            </div>
+
+            <button class="w3-button w3-block w3-left-align w3-hover-indigo w3-border-bottom" onclick="menu_Res()">
+                <i class="fa fa-male"></i> Responsável <i class="fa fa-angle-down w3-right"></i>
+            </button>
+            <div id="acc_Res" class="w3-bar-block w3-hide w3-white w3-card-4">
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-child"></i> Alunos</a>
+            </div>
+
+            <button class="w3-button w3-block w3-left-align w3-hover-indigo w3-border-bottom" onclick="menu_Alu()">
+                <i class="fa fa-child"></i> Aluno <i class="fa fa-angle-down w3-right"></i>
+            </button>
+            <div id="acc_Alu" class="w3-bar-block w3-hide w3-white w3-card-4">
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-file-archive-o"></i> Material</a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-table"></i> Boletim</a>
+            </div>
+
+            <a href="index.html" class="w3-bar-item w3-button w3-hover-indigo"><i class="fa fa-sign-out"></i> Sair</a>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - SiCAEWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+
+    <script>
+        function menu_Dir() {
+            var x = document.getElementById("acc_Dir");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-indigo";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-indigo", "");
+            }
+        }
+        function menu_Sec() {
+            var x = document.getElementById("acc_Sec");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-indigo";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-indigo", "");
+            }
+        }
+        function menu_Pro() {
+            var x = document.getElementById("acc_Pro");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-indigo";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-indigo", "");
+            }
+        }
+        function menu_Res() {
+            var x = document.getElementById("acc_Res");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-indigo";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-indigo", "");
+            }
+        }
+        function menu_Alu() {
+            var x = document.getElementById("acc_Alu");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-indigo";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-indigo", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
