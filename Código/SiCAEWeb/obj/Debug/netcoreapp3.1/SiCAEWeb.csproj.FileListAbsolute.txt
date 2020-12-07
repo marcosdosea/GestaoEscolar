@@ -35,3 +35,40 @@ D:\MegaSync\prog\2020.1\TDI\SiCAE\SiCAE\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWe
 D:\MegaSync\prog\2020.1\TDI\SiCAE\SiCAE\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.pdb
 D:\MegaSync\prog\2020.1\TDI\SiCAE\SiCAE\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.genruntimeconfig.cache
 D:\MegaSync\prog\2020.1\TDI\SiCAE\SiCAE\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.csproj.CopyComplete
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\appsettings.json
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.exe
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.deps.json
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.runtimeconfig.json
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.runtimeconfig.dev.json
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.dll
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.pdb
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.Views.dll
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.Views.pdb
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.csprojAssemblyReference.cache
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.AssemblyInfoInputs.cache
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.AssemblyInfo.cs
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.csproj.CoreCompileInputs.cache
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.MvcApplicationPartsAssemblyInfo.cache
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.RazorAssemblyInfo.cache
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.RazorAssemblyInfo.cs
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\staticwebassets\SiCAEWeb.StaticWebAssets.Manifest.cache
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\staticwebassets\SiCAEWeb.StaticWebAssets.xml
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\scopedcss\bundle\SiCAEWeb.styles.css
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.TagHelpers.input.cache
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.TagHelpers.output.cache
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.RazorCoreGenerate.cache
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.RazorTargetAssemblyInfo.cache
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.RazorTargetAssemblyInfo.cs
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.Views.pdb
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.dll
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.pdb
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.genruntimeconfig.cache
+D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.csproj.CopyComplete
