@@ -7,6 +7,11 @@
 # or wget:
 # wget --no-check-certificate http://gist.githubusercontent.com/kmorcinek/2710267/raw/.gitignore
 
+
+############################################################
+# C#
+
+
 # User-specific files
 
 *.suo
@@ -220,3 +225,12 @@ project.lock.json
 *.feature.cs
 *.feature.xlsx.*
 *.Specs_*.html
+
+
+# C#
+############################################################
+# MySQL
+
+
+# Backup Files (MySql Workbench)
+.bak
