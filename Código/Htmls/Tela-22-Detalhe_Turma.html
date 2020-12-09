@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+<div class="w3-container w3-card w3-margin w3-row">
+	<p><h3>Detalhes</h3></p>
+	<p><h4>Identificação</h4></p>
+	<p id="nome">Nome: </p>
+	<p id="ano">Ano: </p>
+	<p id="turno">Turno: </p>
+	<p>Aulas: </p>
+
+	<div class="w3-row">
+		<div class="w3-col w3-mobile" style="width:14%;min-width:125px">
+			<p>Domingo:</p>
+		</div>
+		<div class="w3-col w3-mobile" style="width:14%;min-width:125px">
+			<p>Segunda:</p>
+			<p>Aula 1:<br>
+				7:00 - 9:00<br>
+				Professor<br>
+				Matemática
+			</p>
+		</div>
+		<div class="w3-col w3-mobile" style="width:14%;min-width:125px">
+			<p>Terça:</p>
+		</div>
+		<div class="w3-col w3-mobile" style="width:14%;min-width:125px">
+			<p>Quarta:</p>
+		</div>
+		<div class="w3-col w3-mobile" style="width:14%;min-width:125px">
+			<p>Quinta:</p>
+		</div>
+		<div class="w3-col w3-mobile" style="width:14%;min-width:125px">
+			<p>Sexta:</p>
+		</div>
+		<div class="w3-col w3-mobile" style="width:14%;min-width:125px">
+			<p>Sábado:</p>
+		</div>
+	</div>
+	<p>Alunos:</p>
+
+	<p><input type="text" name="search" class="w3-input w3-animate-input w3-border" style="width:50%" placeholder="Pesquisar..."></p>
+	<p><table class="w3-table-all w3-centered">
+		<thead>
+			<tr class="w3-gray">
+				<th>Nome</th>
+				<th><input class="w3-check" type="checkbox"></th>
+				<th>Opções</th>
+			</tr>
+		</thead>
+			<tr>
+				<td>Aluno</td>
+				<td><input class="w3-check" type="checkbox"></td>
+				<td>
+					<a href="#" class="w3-button w3-indigo w3-round-xxlarge" style="margin-left:5px"><i class="fa fa-info"></i> Detalhes</a>
+				</td>
+			</tr>
+	</table></p>
+	<div class="w3-right w3-margin-bottom">
+		<a href="#" class="w3-button w3-indigo w3-round-xxlarge">Gerar Boletim</a>
+		<a href="#" class="w3-button w3-indigo w3-round-xxlarge">Notificar</a>
+	</div>
+</div>
+</body>
+</html>
