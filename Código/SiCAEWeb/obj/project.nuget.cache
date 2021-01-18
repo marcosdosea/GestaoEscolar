@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "32CbBw3C9sjP/XtO/LKn4CArivchnkdShwcJGsduVfcsnqptyv9FeIWJUm1bwb7kj8tstf6ojDHtjY93uBtC2g==",
+  "dgSpecHash": "4K/AZxAggUDdxlzqWemzeCagItMGc/7w1omWCd4p52zCiaLJoT4T6MZPE+RYbIKF5pVnhxNMzReRD7FXSqFjog==",
   "success": true,
-  "projectFilePath": "D:\\MegaSync\\prog\\2020.1\\ES II\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj",
+  "projectFilePath": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\andes\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+    "C:\\Users\\JOSECARLOS\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
   ],
   "logs": []
 }

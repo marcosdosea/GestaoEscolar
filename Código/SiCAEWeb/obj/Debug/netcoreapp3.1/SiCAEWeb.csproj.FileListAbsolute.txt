@@ -72,3 +72,40 @@ D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreap
 D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.pdb
 D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.genruntimeconfig.cache
 D:\MegaSync\prog\2020.1\ES II\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.csproj.CopyComplete
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.exe
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.deps.json
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.runtimeconfig.json
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.runtimeconfig.dev.json
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.dll
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.pdb
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.Views.dll
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\bin\Debug\netcoreapp3.1\SiCAEWeb.Views.pdb
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.csprojAssemblyReference.cache
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.AssemblyInfoInputs.cache
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.AssemblyInfo.cs
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.csproj.CoreCompileInputs.cache
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.RazorAssemblyInfo.cache
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.RazorAssemblyInfo.cs
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\staticwebassets\SiCAEWeb.StaticWebAssets.Manifest.cache
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\staticwebassets\SiCAEWeb.StaticWebAssets.xml
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\scopedcss\bundle\SiCAEWeb.styles.css
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.TagHelpers.input.cache
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.TagHelpers.output.cache
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.RazorCoreGenerate.cache
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.RazorTargetAssemblyInfo.cache
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.RazorTargetAssemblyInfo.cs
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.Views.pdb
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.dll
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.pdb
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.genruntimeconfig.cache
+C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.csproj.CopyComplete
