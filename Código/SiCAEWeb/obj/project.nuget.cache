@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "4K/AZxAggUDdxlzqWemzeCagItMGc/7w1omWCd4p52zCiaLJoT4T6MZPE+RYbIKF5pVnhxNMzReRD7FXSqFjog==",
+  "dgSpecHash": "iek6FDvj6v8z48f/cuDlXfh8Kjk6aEJN+WvEMRxGqCIO/KRLvQ2MwNZ0iQiUZOphfO5O685TUpUusWRH5IpP3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj",
+  "projectFilePath": "C:\\Users\\Matheus\\Desktop\\Clonereserva\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\JOSECARLOS\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+    "C:\\Users\\Matheus\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
+    "C:\\Users\\Matheus\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\Matheus\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Matheus\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.0\\microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\Matheus\\.nuget\\packages\\microsoft.extensions.options\\3.0.0\\microsoft.extensions.options.3.0.0.nupkg.sha512",
+    "C:\\Users\\Matheus\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.0\\microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+    "C:\\Users\\Matheus\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
+    "C:\\Users\\Matheus\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

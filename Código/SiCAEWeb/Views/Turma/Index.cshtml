@@ -1,0 +1,47 @@
+@model IEnumerable<Models.TurmaModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdTurma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeTurma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnoNascimento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTurma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeTurma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnoNascimento)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id = item.IdTurma }) |
+                @Html.ActionLink("Details", "Details", new { id = item.IdTurma }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IdTurma })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

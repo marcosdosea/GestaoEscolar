@@ -109,3 +109,16 @@ C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Deb
 C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.pdb
 C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.genruntimeconfig.cache
 C:\Users\JOSECARLOS\Desktop\GestaoEscolar\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.csproj.CopyComplete
+C:\Users\Matheus\Desktop\Clonereserva\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.csprojAssemblyReference.cache
+C:\Users\Matheus\Desktop\Clonereserva\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.AssemblyInfoInputs.cache
+C:\Users\Matheus\Desktop\Clonereserva\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.AssemblyInfo.cs
+C:\Users\Matheus\Desktop\Clonereserva\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.RazorAssemblyInfo.cache
+C:\Users\Matheus\Desktop\Clonereserva\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.RazorAssemblyInfo.cs
+C:\Users\Matheus\Desktop\Clonereserva\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\staticwebassets\SiCAEWeb.StaticWebAssets.Manifest.cache
+C:\Users\Matheus\Desktop\Clonereserva\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\staticwebassets\SiCAEWeb.StaticWebAssets.xml
+C:\Users\Matheus\Desktop\Clonereserva\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\scopedcss\bundle\SiCAEWeb.styles.css
+C:\Users\Matheus\Desktop\Clonereserva\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.TagHelpers.input.cache
+C:\Users\Matheus\Desktop\Clonereserva\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.TagHelpers.output.cache
+C:\Users\Matheus\Desktop\Clonereserva\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.RazorCoreGenerate.cache
+C:\Users\Matheus\Desktop\Clonereserva\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.dll
+C:\Users\Matheus\Desktop\Clonereserva\GestaoEscolar\Código\SiCAEWeb\obj\Debug\netcoreapp3.1\SiCAEWeb.pdb

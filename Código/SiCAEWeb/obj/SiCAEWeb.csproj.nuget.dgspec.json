@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj": {}
+    "C:\\Users\\Matheus\\Desktop\\Clonereserva\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj": {
+    "C:\\Users\\Matheus\\Desktop\\Clonereserva\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Matheus\\Desktop\\Clonereserva\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj",
         "projectName": "SiCAEWeb",
-        "projectPath": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj",
-        "packagesPath": "C:\\Users\\JOSECARLOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\SiCAEWeb\\obj\\",
+        "projectPath": "C:\\Users\\Matheus\\Desktop\\Clonereserva\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj",
+        "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matheus\\Desktop\\Clonereserva\\GestaoEscolar\\Código\\SiCAEWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JOSECARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Matheus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.10.9, )"
@@ -63,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
