@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matheus\\Desktop\\Clonereserva\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj": {}
+    "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matheus\\Desktop\\Clonereserva\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj": {
+    "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matheus\\Desktop\\Clonereserva\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj",
-        "projectName": "SiCAEWeb",
-        "projectPath": "C:\\Users\\Matheus\\Desktop\\Clonereserva\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj",
-        "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matheus\\Desktop\\Clonereserva\\GestaoEscolar\\Código\\SiCAEWeb\\obj\\",
+        "projectUniqueName": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\JOSECARLOS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matheus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JOSECARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,13 +40,162 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\Service\\Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\Service\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\JOSECARLOS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\JOSECARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\Core\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj",
+        "projectName": "SiCAEWeb",
+        "projectPath": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\SiCAEWeb\\SiCAEWeb.csproj",
+        "packagesPath": "C:\\Users\\JOSECARLOS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\SiCAEWeb\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\JOSECARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\Core\\Core.csproj"
+              },
+              "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\JOSECARLOS\\Desktop\\GestaoEscolar\\GestaoEscolar\\Código\\Service\\Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.1.0, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.10.9, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
             }
           },
           "imports": [
@@ -67,7 +216,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
