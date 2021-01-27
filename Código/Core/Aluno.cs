@@ -7,9 +7,9 @@ namespace Core
     {
         public Aluno()
         {
+            Alunoaula = new HashSet<Alunoaula>();
             Alunopessoaresponsavel = new HashSet<Alunopessoaresponsavel>();
             Avaliacao = new HashSet<Avaliacao>();
-            Presencaalunoaula = new HashSet<Presencaalunoaula>();
             TurmaAluno = new HashSet<TurmaAluno>();
         }
 
@@ -35,9 +35,9 @@ namespace Core
         public string NumeroImovel { get; set; }
         public string Nome { get; set; }
 
+        public virtual ICollection<Alunoaula> Alunoaula { get; set; }
         public virtual ICollection<Alunopessoaresponsavel> Alunopessoaresponsavel { get; set; }
         public virtual ICollection<Avaliacao> Avaliacao { get; set; }
-        public virtual ICollection<Presencaalunoaula> Presencaalunoaula { get; set; }
         public virtual ICollection<TurmaAluno> TurmaAluno { get; set; }
     }
 }

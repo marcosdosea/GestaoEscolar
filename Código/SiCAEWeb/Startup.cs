@@ -2,12 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using Core;
+using Core.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Service;
 
 namespace SiCAEWeb
 {
@@ -24,6 +29,16 @@ namespace SiCAEWeb
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<SiCAEContext>(options =>
+                options.UseMySQL(
+                    Configuration.GetConnectionString("SiCAEConnection")));
+
+            services.AddTransient<IHorarioService, HorarioService>();
+            //services.AddTransient<IHorarioService, EditoraService>();
+            //services.AddTransient<ILivroService, LivroService>();
+            services.AddAutoMapper(typeof(Startup).Assembly);
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

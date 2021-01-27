@@ -5,11 +5,6 @@ namespace Core
 {
     public partial class Escola
     {
-        public Escola()
-        {
-            Turma = new HashSet<Turma>();
-        }
-
         public int IdEscola { get; set; }
         public string Nome { get; set; }
         public string Telefone { get; set; }
@@ -24,6 +19,5 @@ namespace Core
         public string NumeroImovel { get; set; }
 
         public virtual Cidade CodIbgeNavigation { get; set; }
-        public virtual ICollection<Turma> Turma { get; set; }
     }
 }

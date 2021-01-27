@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +14,6 @@ namespace Service
         public DisciplinaService(SiCAEContext context)
         {
             context = _context;
-            var u = 1;
         }
 
         private IQueryable<Disciplina> GetQuery()

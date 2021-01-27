@@ -7,7 +7,7 @@ namespace Core
     {
         public Aula()
         {
-            Presencaalunoaula = new HashSet<Presencaalunoaula>();
+            Alunoaula = new HashSet<Alunoaula>();
         }
 
         public int IdAula { get; set; }
@@ -15,6 +15,6 @@ namespace Core
         public DateTime Data { get; set; }
         public int IdProfessorTurmaDisciplina { get; set; }
 
-        public virtual ICollection<Presencaalunoaula> Presencaalunoaula { get; set; }
+        public virtual ICollection<Alunoaula> Alunoaula { get; set; }
     }
 }
