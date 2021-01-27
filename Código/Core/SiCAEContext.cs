@@ -16,6 +16,7 @@ namespace Core
         }
 
         public virtual DbSet<Aluno> Aluno { get; set; }
+        public virtual DbSet<Alunoaula> Alunoaula { get; set; }
         public virtual DbSet<Alunopessoaresponsavel> Alunopessoaresponsavel { get; set; }
         public virtual DbSet<Aula> Aula { get; set; }
         public virtual DbSet<Avaliacao> Avaliacao { get; set; }
@@ -26,12 +27,10 @@ namespace Core
         public virtual DbSet<Disciplina> Disciplina { get; set; }
         public virtual DbSet<Escola> Escola { get; set; }
         public virtual DbSet<Pessoa> Pessoa { get; set; }
-        public virtual DbSet<Presencaalunoaula> Presencaalunoaula { get; set; }
         public virtual DbSet<Professor> Professor { get; set; }
         public virtual DbSet<Secretário> Secretário { get; set; }
         public virtual DbSet<Turma> Turma { get; set; }
         public virtual DbSet<TurmaAluno> TurmaAluno { get; set; }
-        public virtual DbSet<User> User { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -176,6 +175,38 @@ namespace Core
                     .IsUnicode(false);
             });
 
+            modelBuilder.Entity<Alunoaula>(entity =>
+            {
+                entity.HasKey(e => new { e.IdAula, e.IdAluno })
+                    .HasName("PRIMARY");
+
+                entity.ToTable("alunoaula");
+
+                entity.HasIndex(e => e.IdAluno)
+                    .HasName("fk_Aula_Aluno_Aluno1_idx");
+
+                entity.HasIndex(e => e.IdAula)
+                    .HasName("fk_Aula_Aluno_Aula_idx");
+
+                entity.Property(e => e.IdAula).HasColumnName("idAula");
+
+                entity.Property(e => e.IdAluno).HasColumnName("idAluno");
+
+                entity.Property(e => e.EstaPresente).HasColumnName("estaPresente");
+
+                entity.HasOne(d => d.IdAlunoNavigation)
+                    .WithMany(p => p.Alunoaula)
+                    .HasForeignKey(d => d.IdAluno)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_Aula_Aluno_Aluno1");
+
+                entity.HasOne(d => d.IdAulaNavigation)
+                    .WithMany(p => p.Alunoaula)
+                    .HasForeignKey(d => d.IdAula)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_Aula_Aluno_Aula");
+            });
+
             modelBuilder.Entity<Alunopessoaresponsavel>(entity =>
             {
                 entity.HasKey(e => new { e.IdAluno, e.IdPessoa })
@@ -196,7 +227,7 @@ namespace Core
                 entity.Property(e => e.Parentesco)
                     .IsRequired()
                     .HasColumnName("parentesco")
-                    .HasColumnType("enum('PAI','MAE','OUTRO')")
+                    .HasColumnType("enum('PAI','MAE','AVO','IRMAO','OUTRO')")
                     .HasDefaultValueSql("'PAI'");
 
                 entity.HasOne(d => d.IdAlunoNavigation)
@@ -360,7 +391,7 @@ namespace Core
 
             modelBuilder.Entity<Escola>(entity =>
             {
-                entity.HasKey(e => e.IdEscola)
+                entity.HasKey(e => new { e.IdEscola, e.IdDiretor })
                     .HasName("PRIMARY");
 
                 entity.ToTable("escola");
@@ -372,6 +403,8 @@ namespace Core
                     .HasName("fk_Escola_Diretor1_idx");
 
                 entity.Property(e => e.IdEscola).HasColumnName("idEscola");
+
+                entity.Property(e => e.IdDiretor).HasColumnName("idDiretor");
 
                 entity.Property(e => e.Bairro)
                     .IsRequired()
@@ -403,8 +436,6 @@ namespace Core
                     .HasColumnName("email")
                     .HasMaxLength(30)
                     .IsUnicode(false);
-
-                entity.Property(e => e.IdDiretor).HasColumnName("idDiretor");
 
                 entity.Property(e => e.Nome)
                     .IsRequired()
@@ -532,45 +563,13 @@ namespace Core
                     .IsRequired()
                     .HasColumnName("sexo")
                     .HasMaxLength(1)
-                    .IsFixedLength();
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Telefone)
                     .IsRequired()
                     .HasColumnName("telefone")
                     .HasMaxLength(11)
                     .IsUnicode(false);
-            });
-
-            modelBuilder.Entity<Presencaalunoaula>(entity =>
-            {
-                entity.HasKey(e => new { e.IdAula, e.IdAluno })
-                    .HasName("PRIMARY");
-
-                entity.ToTable("presencaalunoaula");
-
-                entity.HasIndex(e => e.IdAluno)
-                    .HasName("fk_Aula_has_Aluno_Aluno1_idx");
-
-                entity.HasIndex(e => e.IdAula)
-                    .HasName("fk_Aula_has_Aluno_Aula_idx");
-
-                entity.Property(e => e.IdAula).HasColumnName("idAula");
-
-                entity.Property(e => e.IdAluno).HasColumnName("idAluno");
-
-                entity.Property(e => e.EstaPresente).HasColumnName("estaPresente");
-
-                entity.HasOne(d => d.IdAlunoNavigation)
-                    .WithMany(p => p.Presencaalunoaula)
-                    .HasForeignKey(d => d.IdAluno)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_Aula_has_Aluno_Aluno1");
-
-                entity.HasOne(d => d.IdAulaNavigation)
-                    .WithMany(p => p.Presencaalunoaula)
-                    .HasForeignKey(d => d.IdAula)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_Aula_has_Aluno_Aula");
             });
 
             modelBuilder.Entity<Professor>(entity =>
@@ -622,14 +621,14 @@ namespace Core
 
                 entity.ToTable("turma");
 
-                entity.HasIndex(e => e.IdEscola)
+                entity.HasIndex(e => e.EscolaIdEscola)
                     .HasName("fk_Turma_Escola1_idx");
 
                 entity.Property(e => e.IdTurma).HasColumnName("idTurma");
 
                 entity.Property(e => e.AnoDaTurma).HasColumnName("anoDaTurma");
 
-                entity.Property(e => e.IdEscola).HasColumnName("idEscola");
+                entity.Property(e => e.EscolaIdEscola).HasColumnName("Escola_idEscola");
 
                 entity.Property(e => e.IsActive).HasColumnName("isActive");
 
@@ -644,12 +643,6 @@ namespace Core
                     .HasColumnName("turno")
                     .HasMaxLength(10)
                     .IsUnicode(false);
-
-                entity.HasOne(d => d.IdEscolaNavigation)
-                    .WithMany(p => p.Turma)
-                    .HasForeignKey(d => d.IdEscola)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_Turma_Escola1");
             });
 
             modelBuilder.Entity<TurmaAluno>(entity =>
@@ -660,10 +653,10 @@ namespace Core
                 entity.ToTable("turma_aluno");
 
                 entity.HasIndex(e => e.IdAluno)
-                    .HasName("fk_Turma_has_Aluno_Aluno1_idx");
+                    .HasName("fk_Turma_Aluno_Aluno1_idx");
 
                 entity.HasIndex(e => e.IdTurma)
-                    .HasName("fk_Turma_has_Aluno_Turma1_idx");
+                    .HasName("fk_Turma_Aluno_Turma1_idx");
 
                 entity.Property(e => e.IdTurma).HasColumnName("idTurma");
 
@@ -673,41 +666,13 @@ namespace Core
                     .WithMany(p => p.TurmaAluno)
                     .HasForeignKey(d => d.IdAluno)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_Turma_has_Aluno_Aluno1");
+                    .HasConstraintName("fk_Turma_Aluno_Aluno1");
 
                 entity.HasOne(d => d.IdTurmaNavigation)
                     .WithMany(p => p.TurmaAluno)
                     .HasForeignKey(d => d.IdTurma)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_Turma_has_Aluno_Turma1");
-            });
-
-            modelBuilder.Entity<User>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToTable("user");
-
-                entity.Property(e => e.CreateTime)
-                    .HasColumnName("create_time")
-                    .HasDefaultValueSql("CURRENT_TIMESTAMP");
-
-                entity.Property(e => e.Email)
-                    .HasColumnName("email")
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Password)
-                    .IsRequired()
-                    .HasColumnName("password")
-                    .HasMaxLength(32)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Username)
-                    .IsRequired()
-                    .HasColumnName("username")
-                    .HasMaxLength(16)
-                    .IsUnicode(false);
+                    .HasConstraintName("fk_Turma_Aluno_Turma1");
             });
 
             OnModelCreatingPartial(modelBuilder);

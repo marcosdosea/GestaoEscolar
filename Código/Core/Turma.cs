@@ -15,9 +15,8 @@ namespace Core
         public string Turno { get; set; }
         public int AnoDaTurma { get; set; }
         public byte IsActive { get; set; }
-        public int IdEscola { get; set; }
+        public int EscolaIdEscola { get; set; }
 
-        public virtual Escola IdEscolaNavigation { get; set; }
         public virtual ICollection<TurmaAluno> TurmaAluno { get; set; }
     }
 }

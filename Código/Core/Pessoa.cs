@@ -24,8 +24,8 @@ namespace Core
         public string Nacionalidade { get; set; }
         public string Identidade { get; set; }
         public string Telefone { get; set; }
-        public string CorRaca { get; set; }
         public string Sexo { get; set; }
+        public string CorRaca { get; set; }
         public string Complemento { get; set; }
         public string NumeroImovel { get; set; }
         public string Bairro { get; set; }
