@@ -20,12 +20,12 @@ namespace SiCAEWeb.Models
         
         [Required(ErrorMessage = "Hora requerida")]
         [DataType(DataType.Time)]
-        public TimeSpan HoraInicio { get; set; }
+        public TimeSpan HorarioInicio { get; set; }
 
         [Display(Name = "HoraTermino")]
         [Required(ErrorMessage = "Hora requerida")]
         [DataType(DataType.Time)]
-        public TimeSpan HoraTermino { get; set; }
+        public TimeSpan HorarioTermino { get; set; }
         
         [Display(Name = "Dia_da_Semana")]
         [StringLength(5, MinimumLength = 3, ErrorMessage = "Nome do dia deve ter entre 3 e 5 caracteres")]

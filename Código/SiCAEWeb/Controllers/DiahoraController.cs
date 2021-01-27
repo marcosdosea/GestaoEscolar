@@ -47,8 +47,8 @@ namespace SiCAEWeb.Controllers
             if (ModelState.IsValid)
             {
                 var diahora = _mapper.Map<Diahora>(diahoraModel);
-                diahora.HorarioInicio = diahoraModel.HoraInicio;
-                diahora.HorarioTermino = diahoraModel.HoraTermino;
+                diahora.HorarioInicio = diahoraModel.HorarioInicio;
+                diahora.HorarioTermino = diahoraModel.HorarioTermino;
                 _horarioService.Inserir(diahora);
             }
             return RedirectToAction(nameof(Index));
