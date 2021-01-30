@@ -33,12 +33,12 @@ namespace SiCAEWeb
             services.AddDbContext<SiCAEContext>(options =>
                 options.UseMySQL(
                     Configuration.GetConnectionString("SiCAEConnection")));
-
+            // DiaHora
             services.AddTransient<IHorarioService, HorarioService>();
-            //services.AddTransient<IHorarioService, EditoraService>();
-            //services.AddTransient<ILivroService, LivroService>();
             services.AddAutoMapper(typeof(Startup).Assembly);
-            
+            // Disciplina
+            services.AddTransient<IDisciplinaService, DisciplinaService>();
+            services.AddAutoMapper(typeof(Startup).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

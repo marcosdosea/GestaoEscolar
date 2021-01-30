@@ -7,19 +7,19 @@ using Core.Service;
 
 namespace Service
 {
-    class DisciplinaService : IDisciplinaService
+    public class DisciplinaService : IDisciplinaService
     {
         private readonly SiCAEContext _context;
 
         public DisciplinaService(SiCAEContext context)
         {
-            context = _context;
+             _context = context;
         }
 
         private IQueryable<Disciplina> GetQuery()
         {
-            IQueryable<Disciplina> tb_autor = _context.Disciplina;
-            var query = from disciplina in tb_autor
+            IQueryable<Disciplina> tb_disciplina = _context.Disciplina;
+            var query = from disciplina in tb_disciplina
                         select disciplina;
             return query;
         }
