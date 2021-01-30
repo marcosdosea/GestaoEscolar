@@ -1,47 +1,56 @@
-﻿@model SiCAEWeb.Models.DiahoraModel
+@model SiCAEWeb.Models.DiahoraModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar";
 }
-
-<h1>Edit</h1>
-
-<h4>DiahoraModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="IdDiahora" class="control-label"></label>
-                <input asp-for="IdDiahora" class="form-control" />
-                <span asp-validation-for="IdDiahora" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HorarioInicio" class="control-label"></label>
-                <input asp-for="HorarioInicio" class="form-control" />
-                <span asp-validation-for="HorarioInicio" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HorarioTermino" class="control-label"></label>
-                <input asp-for="HorarioTermino" class="form-control" />
-                <span asp-validation-for="HorarioTermino" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DiaSemana" class="control-label"></label>
-                <input asp-for="DiaSemana" class="form-control" />
-                <span asp-validation-for="DiaSemana" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="container-fluid ml-md-4">
+    <div class="row">
+        <div class="col-12">
+            <h2>Dia/Hora</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h4>Editar</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="IdDiahora" class="control-label"></label>
+                    <input asp-for="IdDiahora" class="form-control" />
+                    <span asp-validation-for="IdDiahora" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="HorarioInicio" class="control-label"></label>
+                    <input asp-for="HorarioInicio" class="form-control" />
+                    <span asp-validation-for="HorarioInicio" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="HorarioTermino" class="control-label"></label>
+                    <input asp-for="HorarioTermino" class="form-control" />
+                    <span asp-validation-for="HorarioTermino" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DiaSemana" class="control-label"></label>
+                    <input asp-for="DiaSemana" class="form-control" />
+                    <span asp-validation-for="DiaSemana" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <a asp-action="Index" class="btn btn-secondary rounded-pill">Voltar</a>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
