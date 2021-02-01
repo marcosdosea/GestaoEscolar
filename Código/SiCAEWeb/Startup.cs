@@ -35,6 +35,7 @@ namespace SiCAEWeb
                     Configuration.GetConnectionString("SiCAEConnection")));
 
             services.AddTransient<IHorarioService, HorarioService>();
+            services.AddTransient<IPessoaService, PessoaService>();
             //services.AddTransient<IHorarioService, EditoraService>();
             //services.AddTransient<ILivroService, LivroService>();
             services.AddAutoMapper(typeof(Startup).Assembly);

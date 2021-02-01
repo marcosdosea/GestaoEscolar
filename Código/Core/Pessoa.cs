@@ -9,7 +9,7 @@ namespace Core
         {
             Alunopessoaresponsavel = new HashSet<Alunopessoaresponsavel>();
             Professor = new HashSet<Professor>();
-            Secretário = new HashSet<Secretário>();
+            Secretario = new HashSet<Secretário>();
         }
 
         public int IdPessoa { get; set; }
@@ -32,6 +32,6 @@ namespace Core
 
         public virtual ICollection<Alunopessoaresponsavel> Alunopessoaresponsavel { get; set; }
         public virtual ICollection<Professor> Professor { get; set; }
-        public virtual ICollection<Secretário> Secretário { get; set; }
+        public virtual ICollection<Secretário> Secretario { get; set; }
     }
 }
