@@ -1,21 +1,21 @@
 @model IEnumerable<SiCAEWeb.Models.DiahoraModel>
 
 @{
-    ViewData["Title"] = "Dia/Hora";
+    ViewData["Title"] = "DIA/HORA";
 }
-<div class="container-fluid ml-md-4">
+<div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h2>Dia/Hora</h2>
+            <h2>DIA/HORA</h2>
         </div>
     </div>
     <div class="row mt-3">
         <div class="col-2">
-            <a asp-action="Create" class="btn btn-primary rounded-pill">Novo Dia/Hora</a>
+            <a asp-action="Create" class="btn btn-primary rounded-pill">NOVO</a>
         </div>
     </div>
     <div class="row mt-3">
-        <div class="table-responsive-md">
+        <div class="col-12">
             <table class="table table-hover">
                 <thead class="thead-dark">
                     <tr>
@@ -51,9 +51,9 @@
                                 @Html.DisplayFor(modelItem => item.DiaSemana)
                             </td>
                             <td>
-                                @Html.ActionLink("Edit", "Edit", new { id = item.IdDiahora }) |
-                                @Html.ActionLink("Details", "Details", new { id = item.IdDiahora }) |
-                                @Html.ActionLink("Delete", "Delete", new { id = item.IdDiahora })
+                                @Html.ActionLink("EDITAR", "Edit", new { id = item.IdDiahora }) |
+                                @Html.ActionLink("DETALHES", "Details", new { id = item.IdDiahora }) |
+                                @Html.ActionLink("DELETAR", "Delete", new { id = item.IdDiahora })
                             </td>
                         </tr>
                     }
