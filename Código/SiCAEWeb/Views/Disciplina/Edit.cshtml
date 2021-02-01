@@ -1,38 +1,46 @@
-﻿@model SiCAEWeb.Models.DisciplinaModel
+@model SiCAEWeb.Models.DisciplinaModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "EDITAR DISCIPLINA";
 }
-
-<h1>Edit</h1>
-
-<h4>DisciplinaModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="IdDisciplina" class="control-label"></label>
-                <input asp-for="IdDisciplina" class="form-control" />
-                <span asp-validation-for="IdDisciplina" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2>DISCIPLINA</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h4>EDITAR</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="IdDisciplina" class="control-label"></label>
+                    <input asp-for="IdDisciplina" class="form-control" />
+                    <span asp-validation-for="IdDisciplina" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nome" class="control-label"></label>
+                    <input asp-for="Nome" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="SALVAR" class="btn btn-primary rounded-pill" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <a asp-action="Index" class="btn btn-secondary rounded-pill">VOLTAR</a>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

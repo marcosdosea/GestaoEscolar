@@ -1,30 +1,41 @@
-﻿@model SiCAEWeb.Models.DisciplinaModel
+@model SiCAEWeb.Models.DisciplinaModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "DETALHES DISCIPLINA";
 }
-
-<h1>Details</h1>
-
-<div>
-    <h4>DisciplinaModel</h4>
-    <hr />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1>DISCIPLINA</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h4>DETALHES</h4>
+        </div>
+    </div>
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.IdDisciplina)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.IdDisciplina)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Nome)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nome)
         </dd>
     </dl>
-</div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new {  id = Model.IdDisciplina }) |
-    <a asp-action="Index">Back to List</a>
+    <div class="row">
+        <div class="col-12">
+            @Html.ActionLink("EDITAR", "Edit", new { id = Model.IdDisciplina })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <a asp-action="Index" class="btn btn-secondary rounded-pill">VOLTAR</a>
+        </div>
+    </div>
 </div>

@@ -1,17 +1,17 @@
 @model SiCAEWeb.Models.DiahoraModel
 
 @{
-    ViewData["Title"] = "Detalhes";
+    ViewData["Title"] = "DETALHES DIA/HORA";
 }
-<div class="container-fluid ml-md-4">
+<div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h1>Dia/Hora</h1>
+            <h1>DIA/HORA</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-12">
-            <h4>Detalhes</h4>
+            <h4>DETALHES</h4>
         </div>
     </div>
     <dl class="row">
@@ -42,8 +42,12 @@
     </dl>
     <div class="row">
         <div class="col-12">
-            @Html.ActionLink("Edit", "Edit", new { id = Model.IdDiahora }) |
-            <a asp-action="Index" class="btn btn-secondary rounded-pill">Voltar</a>
+            @Html.ActionLink("EDITAR", "Edit", new { id = Model.IdDiahora })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <a asp-action="Index" class="btn btn-secondary rounded-pill">VOLTAR</a>
         </div>
     </div>
 </div>
