@@ -35,12 +35,13 @@ namespace SiCAEWeb
                     Configuration.GetConnectionString("SiCAEConnection")));
             // DiaHora
             services.AddTransient<IHorarioService, HorarioService>();
-            services.AddAutoMapper(typeof(Startup).Assembly);
             // Disciplina
             services.AddTransient<IDisciplinaService, DisciplinaService>();
+            //Escola
+            services.AddTransient<IEscolaService, EscolaService>();
+            //Pessoa
             services.AddTransient<IPessoaService, PessoaService>();
-            //services.AddTransient<IHorarioService, EditoraService>();
-            //services.AddTransient<ILivroService, LivroService>();
+            // Mapeando tudo
             services.AddAutoMapper(typeof(Startup).Assembly);
         }
 
