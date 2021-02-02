@@ -1,17 +1,17 @@
 @model SiCAEWeb.Models.DisciplinaModel
 
 @{
-    ViewData["Title"] = "DETALHES DISCIPLINA";
+    ViewData["Title"] = "Detalhes Disciplina";
 }
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h1>DISCIPLINA</h1>
+            <h1>Disciplina</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-12">
-            <h4>DETALHES</h4>
+            <h4>Detalhes</h4>
         </div>
     </div>
     <dl class="row">
@@ -30,12 +30,12 @@
     </dl>
     <div class="row">
         <div class="col-12">
-            @Html.ActionLink("EDITAR", "Edit", new { id = Model.IdDisciplina })
+            @Html.ActionLink("Editar", "Edit", new { id = Model.IdDisciplina })
         </div>
     </div>
     <div class="row">
         <div class="col-12">
-            <a asp-action="Index" class="btn btn-secondary rounded-pill">VOLTAR</a>
+            <a asp-action="Index" class="btn btn-secondary rounded-pill">Voltar</a>
         </div>
     </div>
 </div>
