@@ -13,10 +13,10 @@ namespace SiCAEWeb.Controllers
     public class PessoaController : Controller
     {
         private readonly IPessoaService _pessoaService;
-        
+
         private readonly IMapper _mapper;
 
-        
+
 
         public PessoaController(IPessoaService pessoaService, IMapper mapper)
         {
@@ -30,6 +30,24 @@ namespace SiCAEWeb.Controllers
             var pessoas = _pessoaService.BuscarPessoas();
             var pessoasVM = _mapper.Map<List<PessoaModel>>(pessoas);
             return View(pessoasVM);
+        }
+
+        [HttpGet]
+        public IActionResult AdicionarPessoa()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AdicionarPessoa(PessoaModel pessoaModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var pessoa = _mapper.Map<Pessoa>(pessoaModel);
+                _pessoaService.InserirPessoa(pessoa);
+            }
+            return RedirectToAction(nameof(Index));
         }
     }
 }

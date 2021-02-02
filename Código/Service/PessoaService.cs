@@ -20,5 +20,11 @@ namespace Service
         {
             return _contexto.Pessoa.ToList();
         }
+
+        public void InserirPessoa(Pessoa pessoa)
+        {
+            _contexto.Pessoa.Add(pessoa);
+            _contexto.SaveChanges();
+        }
     }
 }

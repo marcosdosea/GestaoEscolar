@@ -44,9 +44,8 @@ namespace SiCAEWeb.Models
         public string Cep { get; set; }
 
         [Display(Name = "E-mail")]
-        [DataType(DataType.Text)]
+        [DataType(DataType.EmailAddress)]
         [StringLength(30, ErrorMessage = "Limite de 30 caracteres ultrapassado.")]
-        [RegularExpression(@"b[A-Z0-9._%-]+@[A-Z0-9.-]+.[A-Z]{2,4}b", ErrorMessage = "E-mail em formato inválido.")]
         [Required(ErrorMessage = "Campo Obrigatório!")]
         public string Email { get; set; }
 

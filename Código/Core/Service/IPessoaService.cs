@@ -7,6 +7,6 @@ namespace Core.Service
     public interface IPessoaService
     {
         List<Pessoa> BuscarPessoas();
-
+        void InserirPessoa(Pessoa pessoa);
     }
 }
