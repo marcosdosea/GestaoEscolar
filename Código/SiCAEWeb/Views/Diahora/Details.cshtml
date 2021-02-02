@@ -1,14 +1,19 @@
-﻿@model SiCAEWeb.Models.DiahoraModel
+@model SiCAEWeb.Models.DiahoraModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "DETALHES DIA/HORA";
 }
-
-<h1>Details</h1>
-
-<div>
-    <h4>DiahoraModel</h4>
-    <hr />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1>DIA/HORA</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h4>DETALHES</h4>
+        </div>
+    </div>
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.IdDiahora)
@@ -35,8 +40,14 @@
             @Html.DisplayFor(model => model.DiaSemana)
         </dd>
     </dl>
-</div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new {  id = Model.IdDiahora  }) |
-    <a asp-action="Index">Back to List</a>
+    <div class="row">
+        <div class="col-12">
+            @Html.ActionLink("EDITAR", "Edit", new { id = Model.IdDiahora })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <a asp-action="Index" class="btn btn-secondary rounded-pill">VOLTAR</a>
+        </div>
+    </div>
 </div>

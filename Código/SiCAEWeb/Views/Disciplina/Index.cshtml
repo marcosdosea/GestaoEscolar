@@ -1,0 +1,52 @@
+@model IEnumerable<SiCAEWeb.Models.DisciplinaModel>
+
+@{
+    ViewData["Title"] = "DISCIPLINA";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2>DISCIPLINA</h2>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <a asp-action="Create" class="btn btn-primary rounded-pill">NOVO</a>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IdDisciplina)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </th>
+                        <th>Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IdDisciplina)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nome)
+                            </td>
+                            <td>
+                                @Html.ActionLink("EDITAR", "Edit", new { id = item.IdDisciplina }) |
+                                @Html.ActionLink("DETALHES", "Details", new { id = item.IdDisciplina }) |
+                                @Html.ActionLink("DELETAR", "Delete", new { id = item.IdDisciplina })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

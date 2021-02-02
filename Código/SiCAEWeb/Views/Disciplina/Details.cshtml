@@ -1,0 +1,41 @@
+@model SiCAEWeb.Models.DisciplinaModel
+
+@{
+    ViewData["Title"] = "DETALHES DISCIPLINA";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1>DISCIPLINA</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h4>DETALHES</h4>
+        </div>
+    </div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdDisciplina)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdDisciplina)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+    </dl>
+    <div class="row">
+        <div class="col-12">
+            @Html.ActionLink("EDITAR", "Edit", new { id = Model.IdDisciplina })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <a asp-action="Index" class="btn btn-secondary rounded-pill">VOLTAR</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+@model SiCAEWeb.Models.DisciplinaModel
+
+@{
+    ViewData["Title"] = "DELETAR DISCIPLINA";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2>DISCIPLINA</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h4>DELETAR</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h3>TEM CERTEZA QUE DESEJA DELETAR?</h3>
+        </div>
+    </div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdDisciplina)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdDisciplina)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+    </dl>
+    <div class="row">
+        <div class="col-12">
+            <form asp-action="Delete">
+                <input type="submit" value="DELETAR" class="btn btn-danger rounded-pill" /> |
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <a asp-action="Index" class="btn btn-secondary rounded-pill">VOLTAR</a>
+        </div>
+    </div>
+</div>
