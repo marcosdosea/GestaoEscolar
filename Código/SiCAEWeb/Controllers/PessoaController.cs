@@ -49,5 +49,13 @@ namespace SiCAEWeb.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpGet]
+        public IActionResult AlterarPessoa(int IdPessoa)
+        {
+            var pessoa = _pessoaService.BuscaPessoaID(IdPessoa);
+            var pessoaVM = _mapper.Map<PessoaModel> (pessoa);
+            return View(pessoaVM);
+        }
     }
 }

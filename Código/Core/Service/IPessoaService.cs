@@ -8,5 +8,6 @@ namespace Core.Service
     {
         List<Pessoa> BuscarPessoas();
         void InserirPessoa(Pessoa pessoa);
+        Pessoa BuscaPessoaID(int idPessoa);
     }
 }

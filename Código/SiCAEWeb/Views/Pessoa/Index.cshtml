@@ -30,7 +30,7 @@
                     <td>Professor</td> <!--rever com os meninos o campo no banco-->
                     <td>
                         <a asp-controller="Pessoa" asp-action="Detalhes" asp-route-id="@item.IdPessoa" class="w3-button w3-indigo w3-round-xxlarge" style="margin-left:5px"><i class="fa fa-info"></i> Detalhes</a>
-                        <a asp-controller="Pessoa" asp-action="Alterar" asp-route-id="@item.IdPessoa" class="w3-button w3-indigo w3-round-xxlarge" style="margin-left:5px"><i class="fa fa-cog"></i> Alterar</a>
+                        <a asp-controller="Pessoa" asp-action="AlterarPessoa" asp-route-id="@item.IdPessoa" class="w3-button w3-indigo w3-round-xxlarge" style="margin-left:5px"><i class="fa fa-cog"></i> Alterar</a>
                         <a asp-controller="Pessoa" asp-action="Excluir" asp-route-id="@item.IdPessoa" class="w3-button w3-indigo w3-round-xxlarge" style="margin-left:5px"><i class="fa fa-trash"></i> Excluir</a>
                     </td>
                 </tr>

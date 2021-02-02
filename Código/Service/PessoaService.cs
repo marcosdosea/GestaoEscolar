@@ -16,6 +16,11 @@ namespace Service
             _contexto = contexto;
         }
 
+        public Pessoa BuscaPessoaID(int idPessoa)
+        {
+            return _contexto.Pessoa.Where(pessoa => pessoa.IdPessoa == idPessoa).SingleOrDefault();
+        }
+
         public List<Pessoa> BuscarPessoas()
         {
             return _contexto.Pessoa.ToList();
