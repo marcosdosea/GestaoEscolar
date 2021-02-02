@@ -38,6 +38,9 @@ namespace SiCAEWeb
             services.AddAutoMapper(typeof(Startup).Assembly);
             // Disciplina
             services.AddTransient<IDisciplinaService, DisciplinaService>();
+            services.AddTransient<IPessoaService, PessoaService>();
+            //services.AddTransient<IHorarioService, EditoraService>();
+            //services.AddTransient<ILivroService, LivroService>();
             services.AddAutoMapper(typeof(Startup).Assembly);
         }
 

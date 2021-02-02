@@ -608,7 +608,7 @@ namespace Core
                 entity.Property(e => e.IdPessoa).HasColumnName("idPessoa");
 
                 entity.HasOne(d => d.IdPessoaNavigation)
-                    .WithMany(p => p.Secretário)
+                    .WithMany(p => p.Secretario)
                     .HasForeignKey(d => d.IdPessoa)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_Secretário_Pessoa1");
