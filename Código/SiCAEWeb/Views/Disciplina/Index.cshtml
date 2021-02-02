@@ -1,17 +1,17 @@
 @model IEnumerable<SiCAEWeb.Models.DisciplinaModel>
 
 @{
-    ViewData["Title"] = "DISCIPLINA";
+    ViewData["Title"] = "Disciplina";
 }
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h2>DISCIPLINA</h2>
+            <h2>Disciplina</h2>
         </div>
     </div>
     <div class="row mt-3">
         <div class="col-12">
-            <a asp-action="Create" class="btn btn-primary rounded-pill">NOVO</a>
+            <a asp-action="Create" class="btn btn-primary rounded-pill">Novo</a>
         </div>
     </div>
     <div class="row mt-3">
@@ -39,9 +39,9 @@
                                 @Html.DisplayFor(modelItem => item.Nome)
                             </td>
                             <td>
-                                @Html.ActionLink("EDITAR", "Edit", new { id = item.IdDisciplina }) |
-                                @Html.ActionLink("DETALHES", "Details", new { id = item.IdDisciplina }) |
-                                @Html.ActionLink("DELETAR", "Delete", new { id = item.IdDisciplina })
+                                @Html.ActionLink("Editar", "Edit", new { id = item.IdDisciplina }) |
+                                @Html.ActionLink("Detalhes", "Details", new { id = item.IdDisciplina }) |
+                                @Html.ActionLink("Deletar", "Delete", new { id = item.IdDisciplina })
                             </td>
                         </tr>
                     }

@@ -1,17 +1,17 @@
 @model SiCAEWeb.Models.DiahoraModel
 
 @{
-    ViewData["Title"] = "DETALHES DIA/HORA";
+    ViewData["Title"] = "Detalhes Dia/Hora";
 }
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h1>DIA/HORA</h1>
+            <h1>Dia/Hora</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-12">
-            <h4>DETALHES</h4>
+            <h4>Detalhes</h4>
         </div>
     </div>
     <dl class="row">
@@ -42,12 +42,12 @@
     </dl>
     <div class="row">
         <div class="col-12">
-            @Html.ActionLink("EDITAR", "Edit", new { id = Model.IdDiahora })
+            @Html.ActionLink("Editar", "Edit", new { id = Model.IdDiahora })
         </div>
     </div>
     <div class="row">
         <div class="col-12">
-            <a asp-action="Index" class="btn btn-secondary rounded-pill">VOLTAR</a>
+            <a asp-action="Index" class="btn btn-secondary rounded-pill">Voltar</a>
         </div>
     </div>
 </div>
