@@ -13,6 +13,7 @@ namespace SiCAEWeb.Models
     {
         
         [Display(Name = "Código")]
+        [Key]
         [Required(ErrorMessage = "Código requerido")]
         public int IdDiahora { get; set; }
 

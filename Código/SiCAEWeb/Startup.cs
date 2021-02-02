@@ -35,6 +35,10 @@ namespace SiCAEWeb
                     Configuration.GetConnectionString("SiCAEConnection")));
             // DiaHora
             services.AddTransient<IHorarioService, HorarioService>();
+            
+            // Aluno
+            services.AddTransient<IAlunoService, AlunoService>();
+            
             // Disciplina
             services.AddTransient<IDisciplinaService, DisciplinaService>();
             //Escola

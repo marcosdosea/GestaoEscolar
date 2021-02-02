@@ -17,6 +17,7 @@ namespace Core
         public byte IsActive { get; set; }
         public int EscolaIdEscola { get; set; }
 
+        public virtual Escola EscolaIdEscolaNavigation { get; set; }
         public virtual ICollection<TurmaAluno> TurmaAluno { get; set; }
     }
 }

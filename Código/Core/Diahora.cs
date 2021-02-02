@@ -1,7 +1,5 @@
-﻿using Org.BouncyCastle.Asn1.Cms;
-using System;
+﻿using System;
 using System.Collections.Generic;
-
 
 namespace Core
 {
@@ -14,7 +12,6 @@ namespace Core
 
         public int IdDiaHora { get; set; }
         public TimeSpan HorarioInicio { get; set; }
-        
         public TimeSpan HorarioTermino { get; set; }
         public string DiaSemana { get; set; }
 
