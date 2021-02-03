@@ -21,8 +21,10 @@ namespace Core
         public string Complemento { get; set; }
         public string Cep { get; set; }
         public string NumeroImovel { get; set; }
+        public int IdDiretor { get; set; }
 
         public virtual Cidade CodIbgeNavigation { get; set; }
+        public virtual Pessoa IdDiretorNavigation { get; set; }
         public virtual ICollection<Turma> Turma { get; set; }
     }
 }
