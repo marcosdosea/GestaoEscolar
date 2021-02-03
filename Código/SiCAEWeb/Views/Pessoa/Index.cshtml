@@ -1,40 +1,51 @@
-﻿@model IEnumerable<SiCAEWeb.Models.PessoaModel>
+@model IEnumerable<SiCAEWeb.Models.PessoaModel>
 
 @{
-   
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2>Pessoa</h2>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <a asp-action="AdicionarPessoa" class="btn btn-primary rounded-pill"><i class="fa fa-plus"></i>Novo</a>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-6">
+            <input type="text" name="search" class="w3-input w3-animate-input w3-border" placeholder="Pesquisar...">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Identificação</th>
+                        <th>Nome</th>
+                        <th>Função</th>
+                        <th>Opções</th>
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+                {
 
-
-<div class="w3-container w3-card w3-margin">
-    <p><h3>Pessoas</h3></p>
-    <p><a asp-action="AdicionarPessoa" class="w3-button w3-indigo w3-round-xxlarge"><i class="fa fa-plus"></i> Inserir Novo</a></p>
-    <p><input type="text" name="search" class="w3-input w3-animate-input w3-border" style="width:50%" placeholder="Pesquisar..."></p>
-    <p>
-        <table class="w3-table-all w3-centered">
-            <thead>
-                <tr class="w3-gray">
-                    <th>Identificação</th>
-                    <th>Nome</th>
-                    <th>Função</th>
-                    <th>Opções</th>
-                </tr>
-            </thead>
-            @foreach (var item in Model)
-            {
-                
-                <tr>
-                    <td>@Html.DisplayFor(modelItem => item.IdPessoa)</td>
-                    <td>@Html.DisplayFor(modelItem => item.NomeSocial)</td>
-                    <td>Professor</td> <!--rever com os meninos o campo no banco-->
-                    <td>
-                        <a asp-controller="Pessoa" asp-action="Detalhes" asp-route-id="@item.IdPessoa" class="w3-button w3-indigo w3-round-xxlarge" style="margin-left:5px"><i class="fa fa-info"></i> Detalhes</a>
-                        <a asp-controller="Pessoa" asp-action="AlterarPessoa" asp-route-id="@item.IdPessoa" class="w3-button w3-indigo w3-round-xxlarge" style="margin-left:5px"><i class="fa fa-cog"></i> Alterar</a>
-                        <a asp-controller="Pessoa" asp-action="Excluir" asp-route-id="@item.IdPessoa" class="w3-button w3-indigo w3-round-xxlarge" style="margin-left:5px"><i class="fa fa-trash"></i> Excluir</a>
-                    </td>
-                </tr>
-            }
-        </table>
-    </p>
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.IdPessoa)</td>
+                        <td>@Html.DisplayFor(modelItem => item.NomeSocial)</td>
+                        <td>Professor</td> <!--rever com os meninos o campo no banco-->
+                        <td>
+                            <a asp-controller="Pessoa" asp-action="Detalhes" asp-route-id="@item.IdPessoa" class="btn btn-primary rounded-pill"><i class="fa fa-info"></i> Detalhes</a>
+                            <a asp-controller="Pessoa" asp-action="AlterarPessoa" asp-route-id="@item.IdPessoa" class="btn btn-primary rounded-pill"><i class="fa fa-cog"></i> Alterar</a>
+                            <a asp-controller="Pessoa" asp-action="Excluir" asp-route-id="@item.IdPessoa" class="btn btn-primary rounded-pill"><i class="fa fa-trash"></i> Excluir</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
 </div>
