@@ -8,8 +8,7 @@ namespace Core
         public Pessoa()
         {
             Alunopessoaresponsavel = new HashSet<Alunopessoaresponsavel>();
-            Professor = new HashSet<Professor>();
-            Secretario = new HashSet<Secretário>();
+            Escola = new HashSet<Escola>();
         }
 
         public int IdPessoa { get; set; }
@@ -32,7 +31,6 @@ namespace Core
         public string TipoPessoa { get; set; }
 
         public virtual ICollection<Alunopessoaresponsavel> Alunopessoaresponsavel { get; set; }
-        public virtual ICollection<Professor> Professor { get; set; }
-        public virtual ICollection<Secretário> Secretario { get; set; }
+        public virtual ICollection<Escola> Escola { get; set; }
     }
 }

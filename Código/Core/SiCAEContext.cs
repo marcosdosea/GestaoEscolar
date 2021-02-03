@@ -104,7 +104,7 @@ namespace Core
                 entity.Property(e => e.Identidade)
                     .IsRequired()
                     .HasColumnName("identidade")
-                    .HasMaxLength(12)
+                    .HasMaxLength(8)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Nacionalidade)
@@ -367,6 +367,9 @@ namespace Core
                 entity.HasIndex(e => e.CodIbge)
                     .HasName("fk_Escola_Cidade_idx");
 
+                entity.HasIndex(e => e.IdDiretor)
+                    .HasName("fk_Escola_Pessoa1_idx");
+
                 entity.Property(e => e.IdEscola).HasColumnName("idEscola");
 
                 entity.Property(e => e.Bairro)
@@ -400,6 +403,8 @@ namespace Core
                     .HasMaxLength(30)
                     .IsUnicode(false);
 
+                entity.Property(e => e.IdDiretor).HasColumnName("idDiretor");
+
                 entity.Property(e => e.Nome)
                     .IsRequired()
                     .HasColumnName("nome")
@@ -429,6 +434,12 @@ namespace Core
                     .HasForeignKey(d => d.CodIbge)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_Escola_Cidade1");
+
+                entity.HasOne(d => d.IdDiretorNavigation)
+                    .WithMany(p => p.Escola)
+                    .HasForeignKey(d => d.IdDiretor)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_Escola_Pessoa1");
             });
 
             modelBuilder.Entity<Pessoa>(entity =>
@@ -490,7 +501,7 @@ namespace Core
                 entity.Property(e => e.Identidade)
                     .IsRequired()
                     .HasColumnName("identidade")
-                    .HasMaxLength(12)
+                    .HasMaxLength(8)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Nacionalidade)
@@ -538,27 +549,6 @@ namespace Core
                     .IsRequired()
                     .HasColumnName("tipoPessoa")
                     .HasColumnType("enum('Diretor','Secretario','Professor','Responsavel')");
-            });
-
-            modelBuilder.Entity<Secretário>(entity =>
-            {
-                entity.HasKey(e => new { e.IdSecretário, e.IdPessoa })
-                    .HasName("PRIMARY");
-
-                entity.ToTable("secretário");
-
-                entity.HasIndex(e => e.IdPessoa)
-                    .HasName("fk_Secretário_Pessoa1_idx");
-
-                entity.Property(e => e.IdSecretário).HasColumnName("idSecretário");
-
-                entity.Property(e => e.IdPessoa).HasColumnName("idPessoa");
-
-                entity.HasOne(d => d.IdPessoaNavigation)
-                    .WithMany(p => p.Secretario)
-                    .HasForeignKey(d => d.IdPessoa)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_Secretário_Pessoa1");
             });
 
             modelBuilder.Entity<Turma>(entity =>
