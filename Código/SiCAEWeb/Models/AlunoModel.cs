@@ -11,7 +11,6 @@ namespace SiCAEWeb.Models
     {
         [Display(Name = "Código")]
         [Key]
-        [Required(ErrorMessage = "Código requerido")]
         public int IdAluno { get; set; }
 
         [Display(Name = "Nome")]
@@ -37,7 +36,7 @@ namespace SiCAEWeb.Models
         public string Rua { get; set; }
 
         [Display(Name = "CEP")]
-        [StringLength(8, MinimumLength = 8, ErrorMessage = "Conferir dígitos do CEP")]
+        [StringLength(9, MinimumLength = 8, ErrorMessage = "Conferir dígitos do CEP")]
         public string Cep { get; set; }
 
         [Display(Name = "E-mail")]
@@ -57,7 +56,7 @@ namespace SiCAEWeb.Models
         public string Nacionalidade { get; set; }
 
         [Display(Name = "Identidade")]
-        [StringLength(8, MinimumLength = 5, ErrorMessage = "Conferir a Identidade")]
+        [StringLength(12, MinimumLength = 5, ErrorMessage = "Conferir a Identidade")]
         public string Identidade { get; set; }
         [Display(Name = "Telefone")]
         [StringLength(11, MinimumLength = 10, ErrorMessage = "Conferir numero de telefone")]
