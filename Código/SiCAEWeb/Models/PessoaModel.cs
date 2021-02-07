@@ -103,5 +103,7 @@ namespace SiCAEWeb.Models
         [DataType(DataType.Text)]
         [Required(ErrorMessage = "Campo Obrigatório!")]
         public string Bairro { get; set; }
+
+        public string TipoPessoa { get; set; } = "Diretor";
     }
 }

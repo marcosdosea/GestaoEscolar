@@ -31,5 +31,18 @@ namespace Service
             _contexto.Pessoa.Add(pessoa);
             _contexto.SaveChanges();
         }
+
+        public void AlterarPessoa (Pessoa pessoa)
+        {
+            _contexto.Pessoa.Update(pessoa);
+            _contexto.SaveChanges();
+
+        }
+
+        public void ExcluirPessoa(Pessoa pessoa)
+        {
+            _contexto.Pessoa.Remove(pessoa);
+            _contexto.SaveChanges();
+        }
     }
 }
