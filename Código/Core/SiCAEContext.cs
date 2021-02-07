@@ -99,7 +99,8 @@ namespace Core
                 entity.Property(e => e.Email)
                     .IsRequired()
                     .HasColumnName("email")
-                    .HasMaxLength(30);
+                    .HasMaxLength(30)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Identidade)
                     .IsRequired()
@@ -174,7 +175,7 @@ namespace Core
                 entity.ToTable("alunoaula");
 
                 entity.HasIndex(e => e.IdAluno)
-                    .HasName("fk_Aula_Aluno_Aluno1_idx");
+                    .HasName("fk_AlunoAula_Aluno1_idx");
 
                 entity.HasIndex(e => e.IdAula)
                     .HasName("fk_Aula_Aluno_Aula_idx");
@@ -189,7 +190,7 @@ namespace Core
                     .WithMany(p => p.Alunoaula)
                     .HasForeignKey(d => d.IdAluno)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_Aula_Aluno_Aluno1");
+                    .HasConstraintName("fk_AlunoAula_Aluno1");
 
                 entity.HasOne(d => d.IdAulaNavigation)
                     .WithMany(p => p.Alunoaula)
@@ -200,20 +201,20 @@ namespace Core
 
             modelBuilder.Entity<Alunopessoaresponsavel>(entity =>
             {
-                entity.HasKey(e => new { e.IdAluno, e.IdPessoa })
+                entity.HasKey(e => new { e.IdPessoa, e.IdAluno })
                     .HasName("PRIMARY");
 
                 entity.ToTable("alunopessoaresponsavel");
 
                 entity.HasIndex(e => e.IdAluno)
-                    .HasName("fk_AlunoPessoa_Aluno1_idx");
+                    .HasName("fk_AlunoPessoaResponsavel_Aluno1_idx");
 
                 entity.HasIndex(e => e.IdPessoa)
                     .HasName("fk_AlunoPessoa_Pessoa1_idx");
 
-                entity.Property(e => e.IdAluno).HasColumnName("idAluno");
-
                 entity.Property(e => e.IdPessoa).HasColumnName("idPessoa");
+
+                entity.Property(e => e.IdAluno).HasColumnName("idAluno");
 
                 entity.Property(e => e.Parentesco)
                     .IsRequired()
@@ -225,7 +226,7 @@ namespace Core
                     .WithMany(p => p.Alunopessoaresponsavel)
                     .HasForeignKey(d => d.IdAluno)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_AlunoPessoa_Aluno1");
+                    .HasConstraintName("fk_AlunoPessoaResponsavel_Aluno1");
 
                 entity.HasOne(d => d.IdPessoaNavigation)
                     .WithMany(p => p.Alunopessoaresponsavel)
@@ -319,7 +320,7 @@ namespace Core
 
             modelBuilder.Entity<Diahoraprofessorturmadisciplina>(entity =>
             {
-                entity.HasKey(e => new { e.IdDiaHora, e.IdProfessorTurmaDisciplina })
+                entity.HasKey(e => new { e.IdProfessorTurmaDisciplina, e.IdDiaHora })
                     .HasName("PRIMARY");
 
                 entity.ToTable("diahoraprofessorturmadisciplina");
@@ -330,9 +331,9 @@ namespace Core
                 entity.HasIndex(e => e.IdProfessorTurmaDisciplina)
                     .HasName("fk_DiaHoraProfessorTurmaDisciplina_ProfessorTurmaDisciplina_idx");
 
-                entity.Property(e => e.IdDiaHora).HasColumnName("idDiaHora");
-
                 entity.Property(e => e.IdProfessorTurmaDisciplina).HasColumnName("idProfessorTurmaDisciplina");
+
+                entity.Property(e => e.IdDiaHora).HasColumnName("idDiaHora");
 
                 entity.HasOne(d => d.IdDiaHoraNavigation)
                     .WithMany(p => p.Diahoraprofessorturmadisciplina)
