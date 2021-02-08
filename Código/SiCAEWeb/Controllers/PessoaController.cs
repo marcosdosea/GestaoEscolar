@@ -51,11 +51,44 @@ namespace SiCAEWeb.Controllers
         }
 
         [HttpGet]
+        [Route("/Pessoa/AlterarPessoa/{IdPessoa:int}")]
         public IActionResult AlterarPessoa(int IdPessoa)
         {
             var pessoa = _pessoaService.BuscaPessoaID(IdPessoa);
-            var pessoaVM = _mapper.Map<PessoaModel> (pessoa);
+            var pessoaVM = _mapper.Map<PessoaModel>(pessoa);
             return View(pessoaVM);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AlterarPessoa (PessoaModel pessoaModel)
+        {
+            if(ModelState.IsValid)
+            {
+                var pessoa = _mapper.Map<Pessoa>(pessoaModel);
+                _pessoaService.AlterarPessoa(pessoa); 
+            }
+            return RedirectToAction(nameof(Index));
+        }
+        [HttpGet]
+        [Route("/Pessoa/ExcluirPessoa/{IdPessoa:int}")]
+        public IActionResult ExcluirPesoa(int IdPessoa)
+        {
+            var pessoa = _pessoaService.BuscaPessoaID(IdPessoa);
+            var pessoaVM = _mapper.Map<PessoaModel>(pessoa);
+            return View(pessoaVM);
+        }
+
+        [HttpPost]
+        [Route("/Pessoa/ExcluirPessoa/{IdPessoa:int}")]
+        public IActionResult ExcluirPessoa(PessoaModel pessoaModel)
+        {
+            var pessoa = _mapper.Map<Pessoa>(pessoaModel);
+            _pessoaService.ExcluirPessoa(pessoa);
+            return RedirectToAction(nameof(Index));
+        }
+
+        
+
     }
 }
