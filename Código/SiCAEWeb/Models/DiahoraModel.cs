@@ -1,11 +1,11 @@
-﻿using System;
+﻿using AutoMapper;
+using Core;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-using Org.BouncyCastle.Asn1.Cms;
-using Xamarin.Forms;
-
 
 namespace SiCAEWeb.Models
 {
@@ -14,9 +14,9 @@ namespace SiCAEWeb.Models
         
         [Display(Name = "Código")]
         [Key]
-        [Required(ErrorMessage = "Código requerido")]
+        [HiddenInput]
         public int IdDiahora { get; set; }
-
+        
         [Display(Name = "HoraInicio")]
         
         [Required(ErrorMessage = "Hora requerida")]

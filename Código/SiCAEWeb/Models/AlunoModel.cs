@@ -1,16 +1,18 @@
-﻿using System;
+﻿using AutoMapper;
+using Core;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-using Org.BouncyCastle.Asn1.Cms;
-using Xamarin.Forms;
 namespace SiCAEWeb.Models
 {
     public class AlunoModel
     {
         [Display(Name = "Código")]
         [Key]
+        [HiddenInput]
         public int IdAluno { get; set; }
 
         [Display(Name = "Nome")]
