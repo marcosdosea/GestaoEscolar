@@ -25,7 +25,7 @@ namespace Service
         }
         public void Editar(Diahora diahora)
         {
-            _context.Update(diahora);
+            _context.Diahora.Update(diahora);
             _context.SaveChanges();
         }
         public void Remover(int idDiahora)

@@ -66,7 +66,7 @@ namespace SiCAEWeb.Controllers
         // POST: DiahoraController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, DiahoraModel diahoraModel)
+        public ActionResult Edit(DiahoraModel diahoraModel)
         {
             if (ModelState.IsValid)
             {
