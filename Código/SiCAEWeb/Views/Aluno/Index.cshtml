@@ -17,22 +17,13 @@
     </div>
     <div class="row mt-3">
         <div class="col-12">
-            <table class="table table-hover">
+            <table class="table table-hover text-center">
                 <thead class="thead-dark">
                     <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.IdAluno)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Nome)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.NomeSocial)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Email)
-                        </th>
-                        <th></th>
+                        <th>Identificação</th>
+                        <th>Nome</th>
+                        <th>Turma</th>
+                        <th>Opções</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,15 +37,12 @@
                                 @Html.DisplayFor(modelItem => item.Nome)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.NomeSocial)
-                            </td>                          
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Email)
+                                
                             </td>
                             <td>
-                                @Html.ActionLink("Editar", "Edit", new { id = item.IdAluno }) |
-                                @Html.ActionLink("Detalhes", "Details", new { id = item.IdAluno }) |
-                                @Html.ActionLink("Deletar", "Delete", new { id = item.IdAluno })
+                                <a asp-controller="Aluno" asp-action="Details" asp-route-id="@item.IdAluno" class="btn btn-primary rounded-pill"><i class="fa fa-info"></i> Detalhes</a>
+                                <a asp-controller="Aluno" asp-action="Edit" asp-route-id="@item.IdAluno" class="btn btn-primary rounded-pill"><i class="fa fa-cog"></i> Alterar</a>
+                                <a asp-controller="Aluno" asp-action="Delete" asp-route-id="@item.IdAluno" class="btn btn-primary rounded-pill"><i class="fa fa-trash"></i> Excluir</a>
                             </td>
                         </tr>
                     }

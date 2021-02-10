@@ -17,46 +17,14 @@
     </div>
     <div class="row mt-3">
         <div class="col-12">
-            <table class="table table-hover">
+            <table class="table table-hover text-center">
                 <thead class="thead-dark">
                     <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.IdEscola)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Nome)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Telefone)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Rua)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.NumeroImovel)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Bairro)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Complemento)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Cep)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.CodIbge)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Cnpj)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Email)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.IdDiretor)
-                        </th>
-                        <th></th>
+                        <th>Identificação</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Diretor(a)</th>
+                        <th>Opções</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -73,36 +41,12 @@
                                 @Html.DisplayFor(modelItem => item.Telefone)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Rua)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.NumeroImovel)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Bairro)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Complemento)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Cep)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.CodIbge)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Cnpj)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Email)
-                            </td>
-                            <td>
                                 @Html.DisplayFor(modelItem => item.IdDiretor)
                             </td>
                             <td>
-                                @Html.ActionLink("Editar", "Edit", new { id = item.IdEscola }) |
-                                @Html.ActionLink("Detalhes", "Details", new { id = item.IdEscola }) |
-                                @Html.ActionLink("Deletar", "Delete", new { id = item.IdEscola })
+                                <a asp-controller="Escola" asp-action="Details" asp-route-id="@item.IdEscola" class="btn btn-primary rounded-pill"><i class="fa fa-info"></i> Detalhes</a>
+                                <a asp-controller="Escola" asp-action="Edit" asp-route-id="@item.IdEscola" class="btn btn-primary rounded-pill"><i class="fa fa-cog"></i> Alterar</a>
+                                <a asp-controller="Escola" asp-action="Delete" asp-route-id="@item.IdEscola" class="btn btn-primary rounded-pill"><i class="fa fa-trash"></i> Excluir</a>
                             </td>
                         </tr>
                     }
