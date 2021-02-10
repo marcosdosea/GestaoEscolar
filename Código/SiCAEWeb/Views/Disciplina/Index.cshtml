@@ -16,14 +16,14 @@
     </div>
     <div class="row mt-3">
         <div class="col-12">
-            <table class="table table-hover">
+            <table class="table table-hover text-center">
                 <thead class="thead-dark">
                     <tr>
                         <th>
-                            @Html.DisplayNameFor(model => model.IdDisciplina)
+                            Identificação
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.Nome)
+                            Nome
                         </th>
                         <th>Opções</th>
                     </tr>
@@ -39,9 +39,9 @@
                                 @Html.DisplayFor(modelItem => item.Nome)
                             </td>
                             <td>
-                                @Html.ActionLink("Editar", "Edit", new { id = item.IdDisciplina }) |
-                                @Html.ActionLink("Detalhes", "Details", new { id = item.IdDisciplina }) |
-                                @Html.ActionLink("Deletar", "Delete", new { id = item.IdDisciplina })
+                                <a asp-controller="Disciplina" asp-action="Details" asp-route-id="@item.IdDisciplina" class="btn btn-primary rounded-pill"><i class="fa fa-info"></i> Detalhes</a>
+                                <a asp-controller="Disciplina" asp-action="Edit" asp-route-id="@item.IdDisciplina" class="btn btn-primary rounded-pill"><i class="fa fa-cog"></i> Alterar</a>
+                                <a asp-controller="Disciplina" asp-action="Delete" asp-route-id="@item.IdDisciplina" class="btn btn-primary rounded-pill"><i class="fa fa-trash"></i> Excluir</a>
                             </td>
                         </tr>
                     }
