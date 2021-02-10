@@ -10,12 +10,17 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     </head>
     <body>
-       <!-- <header>
-            <div class="w3-row"></div>
-            <div class="w3-bar-block w3-card w3-blue w3-quarter">
-                <p class="w3-bar-item"><i class="fa fa-user-circle-o" style="font-size:36px"></i>Nome do Usuário</p>
-
-                <a href="inicio.html" class="w3-bar-item w3-button w3-hover-indigo w3-border-bottom"><i style="font-size:24px" class="fa fa-home"></i> Início</a>
+        <header>
+            <div id="mySidenav" class="sidenav">
+                <div class="row">
+                    <div class="col-8">
+                        <p class="w3-bar-item"><i class="fa fa-user-circle-o" style="font-size:36px"></i>Nome do Usuário</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    </div>
+                </div>
+                <a href="inicio.html" class="w3-bar-item btn btn-primary border-bottom"><i class="fa fa-home"></i> Início</a>
 
                 <button class="w3-button w3-block w3-left-align w3-hover-indigo w3-border-bottom" onclick="menu_Dir()">
                     <i class="fa fa-cogs"></i> Diretor <i class="fa fa-angle-down w3-right"></i>
@@ -66,31 +71,30 @@
 
                 <a href="index.html" class="w3-bar-item w3-button w3-hover-indigo"><i class="fa fa-sign-out"></i> Sair</a>
             </div>
-        </header>-->
-        <header>
-            <div class="container-fluid">
+
+            <div id="top" class="container-fluid">
                 <div class="row">
-                    <div class="col-12">
-                        <img src="~/img/logo.png" style="max-width:200px" />
+                    <div class="col-1">
+                        <i id="open" class="fa fa-bars fa-3x pt-2" onclick="openNav()"></i>
+                    </div>
+                    <div class="col-10 text-center">
+                        <img src="~/img/logo-white.png" style="max-width:150px" />
                     </div>
                 </div>
             </div>
         </header>
 
-        <main role="main" class="pt-3 pb-3">
+        <main role="main" id="main" class="pt-3 pb-3">
             <div class="w3-card-2 ml-3 mr-3 pt-3 pb-3">
                 @RenderBody()
             </div>
         </main>
 
         <footer>
-            <div class="container-fluid text-center">
+            <div id="bot" class="container-fluid text-center">
                 <div class="row">
-                    <div class="col-3">
-                        <img src="~/img/logo.png" style="max-width:200px" />
-                    </div>
-                    <div class="col-9" style="align-self:center;">
-                        &copy; 2020 - SiCAEWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    <div class="col-12 border-top " style="align-self:center;">
+                        <small>&copy; 2020 - SiCAEWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></small>
                     </div>
                 </div>
             </div>
@@ -101,6 +105,23 @@
         @RenderSection("Scripts", required: false)
 
         <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.paddingLeft = "250px";
+                document.getElementById("top").style.paddingLeft = "250px";
+                document.getElementById("bot").style.paddingLeft = "250px";
+                document.getElementById("open").style.display = "none";
+            }
+
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.paddingLeft = "0";
+                document.getElementById("top").style.paddingLeft = "0";
+                document.getElementById("bot").style.paddingLeft = "0";
+                document.getElementById("open").style.display = "inline-block";
+            }
+
             function menu_Dir() {
                 var x = document.getElementById("acc_Dir");
                 if (x.className.indexOf("w3-show") == -1) {
