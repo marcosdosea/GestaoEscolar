@@ -16,8 +16,8 @@ namespace SiCAEWeb.Areas.Identity
         {
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<IdentityContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("IdentityContextConnection")));
+                    options.UseMySQL(
+                        context.Configuration.GetConnectionString("SiCAEConnection")));
 
                 services.AddDefaultIdentity<Usuario>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<IdentityContext>();
