@@ -28,6 +28,7 @@ namespace Core
         public virtual DbSet<Pessoa> Pessoa { get; set; }
         public virtual DbSet<Turma> Turma { get; set; }
         public virtual DbSet<TurmaAluno> TurmaAluno { get; set; }
+        public virtual DbSet<Notificacao> Notificacao { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -617,6 +618,27 @@ namespace Core
                     .HasForeignKey(d => d.IdTurma)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_Turma_Aluno_Turma1");
+            });
+
+            modelBuilder.Entity<Notificacao>(entity =>
+            {
+                entity.HasKey(p => p.idNotificacao);
+                entity.HasIndex(p => p.idNotificacao);
+                entity.Property(p => p.titulo)
+                      .HasMaxLength(50)
+                      .IsRequired();
+
+                entity.Property(p => p.descricao)
+                      .HasMaxLength(150);
+
+                entity.Property(p => p.prioridade)
+                      .HasMaxLength(45);
+
+                entity.Property(p => p.remetente)
+                      .HasMaxLength(45);
+
+                entity.Property(p => p.destinatario)
+                      .HasMaxLength(45);
             });
 
             OnModelCreatingPartial(modelBuilder);

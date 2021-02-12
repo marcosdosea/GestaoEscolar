@@ -107,3 +107,11 @@ namespace SiCAEWeb.Models
         public string TipoPessoa { get; set; } = "Diretor";
     }
 }
+
+public enum TipoPessoa
+{
+    Diretor,
+    Secretario,
+    Professor,
+    Responsavel
+}
