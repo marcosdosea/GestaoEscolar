@@ -12,7 +12,7 @@ namespace Core.Service
         IEnumerable<Disciplina> ObterPorNome(string nome);
         IEnumerable<Disciplina> ObterTodos();
         void Remover(int idDisciplina);
-
+        Disciplina Obter(int idDisciplina);
 
     }
 }

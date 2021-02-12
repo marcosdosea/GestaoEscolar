@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Core;
+using Core.DTO;
+using Core.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Core;
-using Core.Service;
 
 namespace Service
 {
@@ -29,10 +30,15 @@ namespace Service
                 .Where(disciplina => disciplina.Nome.Equals(idDisciplina));
             return disciplina.FirstOrDefault();
         }
+        public Disciplina Obter(int idDisciplina)
+        {
+            IEnumerable<Disciplina> disciplinas = GetQuery().Where(disciplinaModel => disciplinaModel.IdDisciplina.Equals(idDisciplina));
 
+            return disciplinas.ElementAtOrDefault(0);
+        }
         public void Editar(Disciplina disciplina)
         {
-            _context.Update(disciplina);
+            _context.Disciplina.Update(disciplina);
             _context.SaveChanges();
         }
 
@@ -46,7 +52,7 @@ namespace Service
         public IEnumerable<Disciplina> ObterPorNome(string nome)
         {
             IEnumerable<Disciplina> disciplinas = GetQuery()
-                .Where(disciplina => disciplina.Nome.StartsWith(nome));
+                .Where(disciplinaModel => disciplinaModel.Nome.StartsWith(nome));
             return disciplinas;
         }
 
