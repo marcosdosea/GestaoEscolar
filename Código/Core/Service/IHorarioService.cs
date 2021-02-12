@@ -15,6 +15,5 @@ namespace Core.Service
         void Remover(int idDiahora);
         IEnumerable<HorarioDTO> ObterPorNomeOrdenadoDescending(string nome);
 
-
     }
 }

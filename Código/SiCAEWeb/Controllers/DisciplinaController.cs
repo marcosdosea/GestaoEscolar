@@ -34,7 +34,7 @@ namespace SiCAEWeb.Controllers
         // GET: DisciplinaController/Details/5
         public ActionResult Details(int id)
         {
-            Disciplina disciplina = _disciplinaService.Buscar(id);
+            Disciplina disciplina = _disciplinaService.Obter(id);
             DisciplinaModel disciplinaModel = _mapper.Map<DisciplinaModel>(disciplina);
             return View(disciplinaModel);
         }
@@ -61,7 +61,7 @@ namespace SiCAEWeb.Controllers
         // GET: DisciplinaController/Edit/5
         public ActionResult Edit(int id)
         {
-            Disciplina disciplina = _disciplinaService.Buscar(id);
+            Disciplina disciplina = _disciplinaService.Obter(id);
             DisciplinaModel disciplinaModel = _mapper.Map<DisciplinaModel>(disciplina);
             return View(disciplinaModel);
         }
@@ -74,7 +74,7 @@ namespace SiCAEWeb.Controllers
             if (ModelState.IsValid)
             {
                 var disciplina = _mapper.Map<Disciplina>(disciplinaModel);
-                _disciplinaService.Inserir(disciplina);
+                _disciplinaService.Editar(disciplina);
             }
             return RedirectToAction(nameof(Index));
         }
