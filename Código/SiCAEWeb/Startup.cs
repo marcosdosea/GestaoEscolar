@@ -45,6 +45,8 @@ namespace SiCAEWeb
             services.AddTransient<IPessoaService, PessoaService>();
             // Turma
             services.AddTransient<ITurmaService, TurmaService>();
+
+            services.AddTransient<INotificacaoService, NotificacaoService>();
             // Mapeando tudo
             services.AddAutoMapper(typeof(Startup).Assembly);
         }

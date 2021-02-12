@@ -34,11 +34,5 @@ namespace Core
         public virtual ICollection<Escola> Escola { get; set; }
     }
 
-    public enum TipoPessoa
-    {
-        Diretor,
-        Secretario,
-        Professor,
-        Responsavel
-    }
+  
 }
