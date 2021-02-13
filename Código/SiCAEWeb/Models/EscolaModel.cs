@@ -13,7 +13,6 @@ namespace SiCAEWeb.Models
         public int IdEscola { get; set; }
 
         [Required(ErrorMessage = "Nome requerido")]
-        [DataType(DataType.Time)]
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Telefone requerido")]
