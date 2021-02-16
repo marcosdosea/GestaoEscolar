@@ -14,10 +14,11 @@
             <div id="mySidenav" class="sidenav">
                 <div class="row">
                     <div class="col-8">
-                        <p class="w3-bar-item"><i class="fa fa-user-circle-o" style="font-size:36px"></i>Nome do Usuário</p>                        
+                        <p class="w3-bar-item"><i class="fa fa-user-circle-o" style="font-size:36px"></i><partial name="_LoginPartial" /></p>
+                        
                     </div>
                     <div class="col-4">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>                    
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     </div>
                 </div>
                 <a href="inicio.html" class="w3-bar-item btn btn-primary border-bottom"><i class="fa fa-home"></i> Início</a>
@@ -82,12 +83,12 @@
                     </div>
                 </div>
             </div>
+            
         </header>
 
         <main role="main" id="main" class="pt-3 pb-3">
             <div class="w3-card-2 ml-3 mr-3 pt-3 pb-3">
                 @RenderBody()
-                <partial name="_LoginPartial" />
             </div>
         </main>
 
