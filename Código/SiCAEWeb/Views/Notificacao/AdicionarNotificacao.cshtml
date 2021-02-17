@@ -1,0 +1,59 @@
+﻿@model SiCAEWeb.Models.NotificacaoModel
+
+@{
+    ViewData["Title"] = "AdicionarNotificacao";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h4>NotificacaoModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AdicionarNotificacao">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="idNotificacao" class="control-label"></label>
+                <input asp-for="idNotificacao" class="form-control" />
+                <span asp-validation-for="idNotificacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="titulo" class="control-label"></label>
+                <input asp-for="titulo" class="form-control" />
+                <span asp-validation-for="titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="descricao" class="control-label"></label>
+                <input asp-for="descricao" class="form-control" />
+                <span asp-validation-for="descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prioridade" class="control-label"></label>
+                <input asp-for="prioridade" class="form-control" />
+                <span asp-validation-for="prioridade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="remetente" class="control-label"></label>
+                <input asp-for="remetente" class="form-control" />
+                <span asp-validation-for="remetente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="destinatario" class="control-label"></label>
+                <input asp-for="destinatario" class="form-control" />
+                <span asp-validation-for="destinatario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -12,5 +12,7 @@ namespace Core.Service
 
         Notificacao BuscarNotificacaoId(int IdNotificacao);
         void ExcluirNotificacao(Notificacao notificacao);
+
+        void InserirNotificacao(Notificacao notificacao);
     }
 }

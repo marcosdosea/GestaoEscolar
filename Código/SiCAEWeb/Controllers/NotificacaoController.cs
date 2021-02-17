@@ -30,6 +30,7 @@ namespace SiCAEWeb.Controllers
             return View(notificacoesVM);
         }
         [HttpGet]
+        [Route("/Notificacao/ExcluirNotificacao/{IdNotificacao:int}")]
         public IActionResult ExcluirNotificacao(int IdNotificacao)
         {
             var notificacao = _notificacaoService.BuscarNotificacaoId(IdNotificacao);
@@ -46,6 +47,7 @@ namespace SiCAEWeb.Controllers
         }
 
         [HttpGet]
+        [Route("/Notificacao/Detalhes/{IdNotificacao:int}")]
         public IActionResult Detalhes(int IdNotificacao)
         {
             var notificacao = _notificacaoService.BuscarNotificacaoId(IdNotificacao);
@@ -53,7 +55,26 @@ namespace SiCAEWeb.Controllers
             return View(notificacaoVM);
 
         }
-        
+
+        [HttpGet]
+        public IActionResult AdicionarNotificacao()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AdicionarNotificacao(NotificacaoModel notificacaoModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var notificacao = _mapper.Map<Notificacao>(notificacaoModel);
+                _notificacaoService.InserirNotificacao(notificacao);
+            }
+            return RedirectToAction(nameof(Index));
+
+        }
+
 
     }
 
