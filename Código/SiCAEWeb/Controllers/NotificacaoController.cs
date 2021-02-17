@@ -29,5 +29,32 @@ namespace SiCAEWeb.Controllers
             var notificacoesVM = _mapper.Map<List<NotificacaoModel>>(notificacoes);
             return View(notificacoesVM);
         }
+        [HttpGet]
+        public IActionResult ExcluirNotificacao(int IdNotificacao)
+        {
+            var notificacao = _notificacaoService.BuscarNotificacaoId(IdNotificacao);
+            var notificacaoVM = _mapper.Map<NotificacaoModel>(notificacao);
+            return View(notificacaoVM);
+        }
+
+        [HttpPost]
+        public IActionResult ExcluirNotificacao(NotificacaoModel notificacaoModel)
+        {
+            var notificacao = _mapper.Map<Notificacao>(notificacaoModel);
+            _notificacaoService.ExcluirNotificacao(notificacao);
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet]
+        public IActionResult Detalhes(int IdNotificacao)
+        {
+            var notificacao = _notificacaoService.BuscarNotificacaoId(IdNotificacao);
+            var notificacaoVM = _mapper.Map<NotificacaoModel>(notificacao);
+            return View(notificacaoVM);
+
+        }
+        
+
     }
+
 }

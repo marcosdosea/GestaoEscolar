@@ -9,5 +9,8 @@ namespace Core.Service
     public interface INotificacaoService
     {
         List<Notificacao>BuscarNotificacoes();
+
+        Notificacao BuscarNotificacaoId(int IdNotificacao);
+        void ExcluirNotificacao(Notificacao notificacao);
     }
 }

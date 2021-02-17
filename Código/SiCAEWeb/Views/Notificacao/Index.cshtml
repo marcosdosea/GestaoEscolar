@@ -56,9 +56,9 @@
                 @Html.DisplayFor(modelItem => item.destinatario)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                <a asp-controller="Notificacao" asp-action="Detalhes" asp-route-id="@item.idNotificacao" class="btn btn-primary rounded-pill"><i class="fa fa-info"></i> Detalhes</a>
+                <a asp-controller="Notificacao" asp-action="AlterarNotificacao" asp-route-id="@item.idNotificacao" class="btn btn-primary rounded-pill"><i class="fa fa-cog"></i> Alterar</a>
+                <a asp-controller="Notificacao" asp-action="ExcluirNotificacao" asp-route-id="@item.idNotificacao" class="btn btn-primary rounded-pill"><i class="fa fa-trash"></i> Excluir</a>
             </td>
         </tr>
 }
