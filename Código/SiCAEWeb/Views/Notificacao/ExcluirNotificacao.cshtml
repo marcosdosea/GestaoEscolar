@@ -1,0 +1,57 @@
+﻿@model SiCAEWeb.Models.NotificacaoModel
+
+@{
+    ViewData["Title"] = "ExcluirNotificacao";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ExcluirNotificacao</h1>
+
+<h3>Deseja mesmo deletar esta notificação?</h3>
+<div>
+    <h4>NotificacaoModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.idNotificacao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.idNotificacao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.descricao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.descricao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.prioridade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.prioridade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.remetente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.remetente)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.destinatario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.destinatario)
+        </dd>
+    </dl>
+    
+    <form asp-action="ExcluirNotificacao">
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>

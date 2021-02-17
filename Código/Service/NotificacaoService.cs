@@ -22,6 +22,17 @@ namespace Service
             return _contexto.Notificacao.ToList();
         }
 
+        public Notificacao BuscarNotificacaoId(int Id)
+        {
+            return _contexto.Notificacao.Where(notificacao => notificacao.idNotificacao == Id).SingleOrDefault();
+           
+        }
+
+        public void ExcluirNotificacao(Notificacao notificacao)
+        {
+            _contexto.Notificacao.Remove(notificacao);
+            _contexto.SaveChanges();
+        }
 
     }
 }
