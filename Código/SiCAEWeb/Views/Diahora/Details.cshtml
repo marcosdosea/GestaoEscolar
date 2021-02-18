@@ -1,54 +1,55 @@
-@model SiCAEWeb.Models.DiahoraModel
+Ôªø@model SiCAEWeb.Models.DiahoraModel
 
 @{
-    ViewData["Title"] = "Detalhes Hor·rios";
+    ViewData["Title"] = "Detalhes Hor√°rios";
 }
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <h1>Hor·rio</h1>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1>Hor√°rio</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h4>Detalhes</h4>
+            </div>
+        </div>
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdDiahora)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdDiahora)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.HorarioInicio)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.HorarioInicio)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.HorarioTermino)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.HorarioTermino)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DiaSemana)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DiaSemana)
+            </dd>
+        </dl>
+        <div class="row">
+            <div class="col-12">
+                @Html.ActionLink("Editar", "Edit", new { id = Model.IdDiahora })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <a asp-action="Index" class="btn btn-secondary rounded-pill">Voltar</a>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12">
-            <h4>Detalhes</h4>
-        </div>
-    </div>
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.IdDiahora)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.IdDiahora)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.HorarioInicio)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.HorarioInicio)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.HorarioTermino)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.HorarioTermino)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DiaSemana)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DiaSemana)
-        </dd>
-    </dl>
-    <div class="row">
-        <div class="col-12">
-            @Html.ActionLink("Editar", "Edit", new { id = Model.IdDiahora })
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <a asp-action="Index" class="btn btn-secondary rounded-pill">Voltar</a>
-        </div>
-    </div>
-</div>
