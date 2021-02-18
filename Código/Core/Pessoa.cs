@@ -28,7 +28,7 @@ namespace Core
         public string Complemento { get; set; }
         public string NumeroImovel { get; set; }
         public string Bairro { get; set; }
-        public string TipoPessoa { get; set; } = "Diretor";
+        public string TipoPessoa { get; set; } 
 
         public virtual ICollection<Alunopessoaresponsavel> Alunopessoaresponsavel { get; set; }
         public virtual ICollection<Escola> Escola { get; set; }

@@ -13,7 +13,8 @@ namespace Core
         public string descricao { get; set; }
         public string prioridade { get; set; }
         public string remetente { get; set; }
-        public string destinatario { get; set; }
+        public bool notificaResponsavel { get; set; }
+        public bool notificaProfessor { get; set; }
 
 
     }

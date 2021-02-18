@@ -13,38 +13,50 @@
     <div class="col-md-4">
         <form asp-action="AdicionarNotificacao">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="idNotificacao" class="control-label"></label>
-                <input asp-for="idNotificacao" class="form-control" />
-                <span asp-validation-for="idNotificacao" class="text-danger"></span>
-            </div>
+
             <div class="form-group">
                 <label asp-for="titulo" class="control-label"></label>
                 <input asp-for="titulo" class="form-control" />
                 <span asp-validation-for="titulo" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="descricao" class="control-label"></label>
                 <input asp-for="descricao" class="form-control" />
                 <span asp-validation-for="descricao" class="text-danger"></span>
             </div>
-            <div class="form-group">
+
+            <div>
                 <label asp-for="prioridade" class="control-label"></label>
-                <input asp-for="prioridade" class="form-control" />
+                <select asp-for=" prioridade" class="form-control">
+                    <option value="Alta">Alta</option>
+                    <option value="Média">Média</option>
+                    <option value="Baixa">Baixa</option>
+                </select>
                 <span asp-validation-for="prioridade" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="remetente" class="control-label"></label>
-                <input asp-for="remetente" class="form-control" />
+                <select asp-for="remetente" class="form-control">
+                    <option value="Diretor">Diretor</option>
+                    <option value="Professor">Professor</option>
+                </select>
                 <span asp-validation-for="remetente" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="destinatario" class="control-label"></label>
-                <input asp-for="destinatario" class="form-control" />
-                <span asp-validation-for="destinatario" class="text-danger"></span>
+                <label class="control-label"> Para quem deseja enviar? </label>
+                <br />
+                <input asp-for="notificaResponsavel" type="checkbox" id="inputNotificarResp">
+                <label for="Responsavel">Responsavel</label>
+            </div>
+
+            <div>
+                <input asp-for="notificaProfessor" type="checkbox" id="inputNotificarProf">
+                <label for="Professor">Professor</label>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Inserir" class="btn btn-primary" />
             </div>
         </form>
     </div>

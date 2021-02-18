@@ -637,8 +637,10 @@ namespace Core
                 entity.Property(p => p.remetente)
                       .HasMaxLength(45);
 
-                entity.Property(p => p.destinatario)
-                      .HasMaxLength(45);
+
+                entity.Property(p => p.notificaProfessor);
+                   
+                entity.Property(p => p.notificaResponsavel);
             });
 
             OnModelCreatingPartial(modelBuilder);
