@@ -78,6 +78,27 @@ namespace SiCAEWeb.Controllers
 
         }
 
+        [HttpGet]
+        [Route("/Notificacao/AlterarNotificacao/{IdNotificacao:int}")]
+        public IActionResult AlterarNotificacao(int IdNotificacao)
+        {
+            var notificacao = _notificacaoService.BuscarNotificacaoId(IdNotificacao);
+            var notificacaoVM = _mapper.Map<NotificacaoModel>(notificacao);
+            return View(notificacaoVM);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AlterarNotificacao(NotificacaoModel notificacaoModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var notifiacao = _mapper.Map<Notificacao>(notificacaoModel);
+                _notificacaoService.AlterarNotificacao(notifiacao);
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
 
     }
 

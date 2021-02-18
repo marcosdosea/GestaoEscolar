@@ -16,6 +16,7 @@ namespace Core
         public bool notificaResponsavel { get; set; }
         public bool notificaProfessor { get; set; }
 
+        public bool notificaAluno { get; set;  }
 
     }
 }

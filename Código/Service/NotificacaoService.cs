@@ -40,5 +40,12 @@ namespace Service
                 _contexto.SaveChanges();
         }
 
+        public void AlterarNotificacao(Notificacao notificacao)
+        {
+            _contexto.Notificacao.Update(notificacao);
+            _contexto.SaveChanges();
+
+        }
+
     }
 }

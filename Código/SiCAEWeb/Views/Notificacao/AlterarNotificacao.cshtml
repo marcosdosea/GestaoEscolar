@@ -1,47 +1,41 @@
 ﻿@model SiCAEWeb.Models.NotificacaoModel
 
 @{
-    ViewData["Title"] = "AdicionarNotificacao";
+    ViewData["Title"] = "AlterarNotificacao";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+<h1>Alterar Notificacao</h1>
 
 <h4>NotificacaoModel</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="AdicionarNotificacao">
+        <form asp-action="AlterarNotificacao">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
+            <div class="form-group">
+                <label asp-for="idNotificacao" class="control-label"></label>
+                <input readonly asp-for="idNotificacao" class="form-control" />
+                <span asp-validation-for="idNotificacao" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="titulo" class="control-label"></label>
                 <input asp-for="titulo" class="form-control" />
                 <span asp-validation-for="titulo" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <label asp-for="descricao" class="control-label"></label>
                 <input asp-for="descricao" class="form-control" />
                 <span asp-validation-for="descricao" class="text-danger"></span>
             </div>
-
-            <div>
+            <div class="form-group">
                 <label asp-for="prioridade" class="control-label"></label>
-                <select asp-for=" prioridade" class="form-control">
-                    <option value="Alta">Alta</option>
-                    <option value="Média">Média</option>
-                    <option value="Baixa">Baixa</option>
-                </select>
+                <input asp-for="prioridade" class="form-control" />
                 <span asp-validation-for="prioridade" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <label asp-for="remetente" class="control-label"></label>
-                <select asp-for="remetente" class="form-control">
-                    <option value="Diretor">Diretor</option>
-                    <option value="Professor">Professor</option>
-                </select>
+                <input asp-for="remetente" class="form-control" />
                 <span asp-validation-for="remetente" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -60,7 +54,7 @@
                 <label for="Aluno">Aluno</label>
             </div>
             <div class="form-group">
-                <input type="submit" value="Inserir" class="btn btn-primary" />
+                <input type="submit" value="Salvar" class="btn btn-primary" />
             </div>
         </form>
     </div>

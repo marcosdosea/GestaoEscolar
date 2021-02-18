@@ -8,6 +8,7 @@ namespace SiCAEWeb.Models
 {
     public class NotificacaoModel
     {
+        [Display(Name = "ID")]
         public string idNotificacao { get; set; }
 
         [Display(Name = "Título")]
@@ -38,7 +39,7 @@ namespace SiCAEWeb.Models
         public bool notificaProfessor { get; set; }
 
         public bool notificaResponsavel { get; set; }
-
+        public bool notificaAluno { get; set; }
 
 
 

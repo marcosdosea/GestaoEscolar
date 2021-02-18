@@ -63,6 +63,10 @@
                     {
                         <div> Responsável</div>
                     }
+                    @if (item.notificaAluno)
+                    {
+                        <div>Aluno</div>
+                    }
                 </td>
                 <td>
                     <a asp-controller="Notificacao" asp-action="Detalhes" asp-route-id="@item.idNotificacao" class="btn btn-primary rounded-pill"><i class="fa fa-info"></i> Detalhes</a>

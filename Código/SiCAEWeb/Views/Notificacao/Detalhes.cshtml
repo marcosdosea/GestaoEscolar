@@ -41,27 +41,26 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.remetente)
         </dd>
-
-        <dt class="col-sm-10">
-            Destinatário(s) <br />
-
-
+        <dt class="col-sm-2">
+            Destinatário(s)
         </dt>
-        <dd>
-            @if (Model.notificaProfessor)
-            {
-                <div>Professor</div>
-            }
-            @if (Model.notificaResponsavel)
-            {
-                <div>Responsável</div>
-            }
-        </dd>
+        @if (Model.notificaProfessor)
+        {
+            <dd>Professor</dd>
+        }
+        @if (Model.notificaResponsavel)
+        {
+            <dd>&nbsp;Responsável</dd>
+        }
+        @if (Model.notificaAluno)
+        {
+            <dd>&nbsp;Aluno</dd>
+        }
     </dl>
 </div>
 <div>
     <a asp-controller="Notificacao" asp-action="AlterarNotificacao" asp-route-id="Model.idNotificacao" class="btn btn-primary rounded-pill"><i class="fa fa-cog"></i> Alterar</a>
     <a asp-action="Index" class="btn btn-primary rounded-pill">Voltar</a>
-  
+
 </div>
 

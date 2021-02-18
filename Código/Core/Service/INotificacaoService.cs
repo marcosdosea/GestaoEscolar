@@ -14,5 +14,7 @@ namespace Core.Service
         void ExcluirNotificacao(Notificacao notificacao);
 
         void InserirNotificacao(Notificacao notificacao);
+
+        void AlterarNotificacao(Notificacao notificacao);
     }
 }

@@ -11,52 +11,55 @@
 <div>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.idNotificacao)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.idNotificacao)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.titulo)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.titulo)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.descricao)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.descricao)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.prioridade)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.prioridade)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.remetente)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.remetente)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.notificaProfessor)
+        <dt class="col-sm-2">
+            Destinatário
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.notificaProfessor)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.notificaResponsavel)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.notificaResponsavel)
-        </dd>
+        @if (Model.notificaProfessor)
+        {
+            <dd>Professor</dd>
+        }
+        @if (Model.notificaResponsavel)
+        {
+            <dd>&nbsp;Responsável</dd>
+        }
+        @if (Model.notificaAluno)
+        {
+            <dd>&nbsp;Aluno</dd>
+        }
     </dl>
     
     <form asp-action="ExcluirNotificacao">
         <input type="submit" value="Excluir" class="btn btn-danger" /> |
-        <a asp-action="Index">Voltar</a>
+        <a asp-action="Index" class="btn btn-primary rounded-pill">Voltar</a>
     </form>
 </div>
