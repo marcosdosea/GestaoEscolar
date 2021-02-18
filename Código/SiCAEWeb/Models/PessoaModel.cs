@@ -12,7 +12,7 @@ namespace SiCAEWeb.Models
         [Display(Name = "Código Pessoa ")]
         public int IdPessoa { get; set; }
 
-        [Display(Name = "Nome Social ")]
+        [Display(Name = "Nome ")]
         [StringLength(50, ErrorMessage = "Limite de 50 caracteres ultrapassado.")]
         [DataType(DataType.Text)]
         public string NomeSocial { get; set; }
@@ -92,7 +92,7 @@ namespace SiCAEWeb.Models
         [StringLength(50, ErrorMessage = "Limite de 50 caracteres ultrapassado.")]
         [DataType(DataType.Text)]
         public string Complemento { get; set; }
-      
+
         [Display(Name = "Número")]
         [Required(ErrorMessage = "Campo Obrigatório!")]
         [StringLength(5, ErrorMessage = "Limite de 5 caracteres ultrapassado.")]
@@ -104,14 +104,7 @@ namespace SiCAEWeb.Models
         [Required(ErrorMessage = "Campo Obrigatório!")]
         public string Bairro { get; set; }
 
-        public string TipoPessoa { get; set; } = "Diretor";
+        [Display(Name = "Perfil ")]
+        public string TipoPessoa { get; set; }
     }
-}
-
-public enum TipoPessoa
-{
-    Diretor,
-    Secretario,
-    Professor,
-    Responsavel
 }

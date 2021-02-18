@@ -26,19 +26,22 @@ namespace SiCAEWeb.Controllers
         public IActionResult Index()
         {
             var notificacoes = _notificacaoService.BuscarNotificacoes();
+            
             var notificacoesVM = _mapper.Map<List<NotificacaoModel>>(notificacoes);
             return View(notificacoesVM);
         }
+
         [HttpGet]
         [Route("/Notificacao/ExcluirNotificacao/{IdNotificacao:int}")]
         public IActionResult ExcluirNotificacao(int IdNotificacao)
         {
             var notificacao = _notificacaoService.BuscarNotificacaoId(IdNotificacao);
-            var notificacaoVM = _mapper.Map<NotificacaoModel>(notificacao);
+            var notificacaoVM = _mapper.Map<NotificacaoModel>(notificacao);    
             return View(notificacaoVM);
         }
 
         [HttpPost]
+        [Route("/Notificacao/ExcluirNotificacao/{IdNotificacao:int}")]
         public IActionResult ExcluirNotificacao(NotificacaoModel notificacaoModel)
         {
             var notificacao = _mapper.Map<Notificacao>(notificacaoModel);
@@ -73,6 +76,27 @@ namespace SiCAEWeb.Controllers
             }
             return RedirectToAction(nameof(Index));
 
+        }
+
+        [HttpGet]
+        [Route("/Notificacao/AlterarNotificacao/{IdNotificacao:int}")]
+        public IActionResult AlterarNotificacao(int IdNotificacao)
+        {
+            var notificacao = _notificacaoService.BuscarNotificacaoId(IdNotificacao);
+            var notificacaoVM = _mapper.Map<NotificacaoModel>(notificacao);
+            return View(notificacaoVM);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AlterarNotificacao(NotificacaoModel notificacaoModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var notifiacao = _mapper.Map<Notificacao>(notificacaoModel);
+                _notificacaoService.AlterarNotificacao(notifiacao);
+            }
+            return RedirectToAction(nameof(Index));
         }
 
 

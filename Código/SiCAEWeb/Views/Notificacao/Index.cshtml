@@ -5,11 +5,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="AdicionarNotificacao">Inserir</a>
-</p>
+
+<div class="col-12">
+    <a asp-action="AdicionarNotificacao" class="btn btn-primary rounded-pill"><i class="fa fa-plus"></i>Novo</a>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -29,39 +29,52 @@
                 @Html.DisplayNameFor(model => model.remetente)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.destinatario)
+                Destinatario(s)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.idNotificacao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.titulo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.descricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.prioridade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.remetente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.destinatario)
-            </td>
-            <td>
-                <a asp-controller="Notificacao" asp-action="Detalhes" asp-route-id="@item.idNotificacao" class="btn btn-primary rounded-pill"><i class="fa fa-info"></i> Detalhes</a>
-                <a asp-controller="Notificacao" asp-action="AlterarNotificacao" asp-route-id="@item.idNotificacao" class="btn btn-primary rounded-pill"><i class="fa fa-cog"></i> Alterar</a>
-                <a asp-controller="Notificacao" asp-action="ExcluirNotificacao" asp-route-id="@item.idNotificacao" class="btn btn-primary rounded-pill"><i class="fa fa-trash"></i> Excluir</a>
-               
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idNotificacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.prioridade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.remetente)
+                </td>
+                <td>
+
+                    @if (item.notificaProfessor)
+                    {
+                        <div> Professor</div>
+                    }
+                    @if (item.notificaResponsavel)
+                    {
+                        <div> Responsável</div>
+                    }
+                    @if (item.notificaAluno)
+                    {
+                        <div>Aluno</div>
+                    }
+                </td>
+                <td>
+                    <a asp-controller="Notificacao" asp-action="Detalhes" asp-route-id="@item.idNotificacao" class="btn btn-primary rounded-pill"><i class="fa fa-info"></i> Detalhes</a>
+                    <a asp-controller="Notificacao" asp-action="AlterarNotificacao" asp-route-id="@item.idNotificacao" class="btn btn-primary rounded-pill"><i class="fa fa-cog"></i> Alterar</a>
+                    <a asp-controller="Notificacao" asp-action="ExcluirNotificacao" asp-route-id="@item.idNotificacao" class="btn btn-primary rounded-pill"><i class="fa fa-trash"></i> Excluir</a>
+
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
