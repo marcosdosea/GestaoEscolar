@@ -9,5 +9,6 @@ namespace Core
         public int IdDiaHora { get; set; }
 
         public virtual Diahora IdDiaHoraNavigation { get; set; }
+        public virtual Professorturmadisciplina IdProfessorTurmaDisciplinaNavigation { get; set; }
     }
 }

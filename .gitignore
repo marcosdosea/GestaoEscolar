@@ -278,3 +278,6 @@ __pycache__/
 
 *.bak
 Código/.vs/SiCAE/v16/.suo
+############################################################
+# SonarQube
+.sonarqube/

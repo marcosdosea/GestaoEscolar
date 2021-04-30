@@ -38,6 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\CIdade\" />
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 

@@ -7,6 +7,7 @@ namespace Core
     {
         public Turma()
         {
+            Professorturmadisciplina = new HashSet<Professorturmadisciplina>();
             TurmaAluno = new HashSet<TurmaAluno>();
         }
 
@@ -18,6 +19,7 @@ namespace Core
         public int EscolaIdEscola { get; set; }
 
         public virtual Escola EscolaIdEscolaNavigation { get; set; }
+        public virtual ICollection<Professorturmadisciplina> Professorturmadisciplina { get; set; }
         public virtual ICollection<TurmaAluno> TurmaAluno { get; set; }
     }
 }

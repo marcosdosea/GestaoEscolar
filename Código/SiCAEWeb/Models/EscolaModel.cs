@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,8 +9,9 @@ namespace SiCAEWeb.Models
 {
     public class EscolaModel
     {
-        [Display(Name = "Código")]
-        [Required(ErrorMessage = "Código requerido")]
+        [Display(Name = "")]
+        [Key]
+        [HiddenInput]
         public int IdEscola { get; set; }
 
         [Required(ErrorMessage = "Nome requerido")]

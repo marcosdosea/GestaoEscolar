@@ -12,7 +12,7 @@ namespace SiCAEWeb.Controllers
     {
         IAlunoService _alunoService;
         IMapper _mapper;
-        // GET: DiahoraController
+        // GET: AlunoController
         public AlunoController(IAlunoService alunoService, IMapper mapper)
         {
             _alunoService = alunoService;
@@ -39,7 +39,7 @@ namespace SiCAEWeb.Controllers
             return View();
         }
 
-        // POST: DiahoraController/Create
+        // POST: AlunoController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(AlunoModel alunoModel)
