@@ -15,6 +15,7 @@ namespace Core
         public DateTime Data { get; set; }
         public int IdProfessorTurmaDisciplina { get; set; }
 
+        public virtual Professorturmadisciplina IdProfessorTurmaDisciplinaNavigation { get; set; }
         public virtual ICollection<Alunoaula> Alunoaula { get; set; }
     }
 }

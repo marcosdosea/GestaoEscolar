@@ -8,8 +8,10 @@ namespace Core
         public Aluno()
         {
             Alunoaula = new HashSet<Alunoaula>();
+            Alunonotificacao = new HashSet<Alunonotificacao>();
             Alunopessoaresponsavel = new HashSet<Alunopessoaresponsavel>();
             Avaliacao = new HashSet<Avaliacao>();
+            Boletim = new HashSet<Boletim>();
             TurmaAluno = new HashSet<TurmaAluno>();
         }
 
@@ -19,7 +21,7 @@ namespace Core
         public string Cpf { get; set; }
         public string Rua { get; set; }
         public string Cep { get; set; }
-        public string Email { get; set; }
+        public byte[] Email { get; set; }
         public string Cidade { get; set; }
         public string ProcedenciaEscolar { get; set; }
         public string Nacionalidade { get; set; }
@@ -36,8 +38,10 @@ namespace Core
         public string Nome { get; set; }
 
         public virtual ICollection<Alunoaula> Alunoaula { get; set; }
+        public virtual ICollection<Alunonotificacao> Alunonotificacao { get; set; }
         public virtual ICollection<Alunopessoaresponsavel> Alunopessoaresponsavel { get; set; }
         public virtual ICollection<Avaliacao> Avaliacao { get; set; }
+        public virtual ICollection<Boletim> Boletim { get; set; }
         public virtual ICollection<TurmaAluno> TurmaAluno { get; set; }
     }
 }

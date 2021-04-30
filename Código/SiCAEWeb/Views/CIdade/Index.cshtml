@@ -1,0 +1,54 @@
+﻿@model IEnumerable<SiCAEWeb.Models.CidadeModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Nova Cidade</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idCidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodIbge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idCidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodIbge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.idCidade }) |
+                @Html.ActionLink("Details", "Details", new { id=item.idCidade}) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.idCidade })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

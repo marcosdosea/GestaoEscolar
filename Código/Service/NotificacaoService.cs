@@ -24,7 +24,7 @@ namespace Service
 
         public Notificacao BuscarNotificacaoId(int Id)
         {
-            return _contexto.Notificacao.Where(notificacao => notificacao.idNotificacao == Id).SingleOrDefault();
+            return _contexto.Notificacao.Where(notificacao => notificacao.IdNotificacao == Id).SingleOrDefault();
            
         }
 

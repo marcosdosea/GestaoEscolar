@@ -17,18 +17,22 @@ namespace Core
 
         public virtual DbSet<Aluno> Aluno { get; set; }
         public virtual DbSet<Alunoaula> Alunoaula { get; set; }
+        public virtual DbSet<Alunonotificacao> Alunonotificacao { get; set; }
         public virtual DbSet<Alunopessoaresponsavel> Alunopessoaresponsavel { get; set; }
         public virtual DbSet<Aula> Aula { get; set; }
         public virtual DbSet<Avaliacao> Avaliacao { get; set; }
+        public virtual DbSet<Boletim> Boletim { get; set; }
         public virtual DbSet<Cidade> Cidade { get; set; }
         public virtual DbSet<Diahora> Diahora { get; set; }
         public virtual DbSet<Diahoraprofessorturmadisciplina> Diahoraprofessorturmadisciplina { get; set; }
         public virtual DbSet<Disciplina> Disciplina { get; set; }
         public virtual DbSet<Escola> Escola { get; set; }
+        public virtual DbSet<Notificacao> Notificacao { get; set; }
         public virtual DbSet<Pessoa> Pessoa { get; set; }
+        public virtual DbSet<Pessoanotificacao> Pessoanotificacao { get; set; }
+        public virtual DbSet<Professorturmadisciplina> Professorturmadisciplina { get; set; }
         public virtual DbSet<Turma> Turma { get; set; }
         public virtual DbSet<TurmaAluno> TurmaAluno { get; set; }
-        public virtual DbSet<Notificacao> Notificacao { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -100,8 +104,7 @@ namespace Core
                 entity.Property(e => e.Email)
                     .IsRequired()
                     .HasColumnName("email")
-                    .HasMaxLength(30)
-                    .IsUnicode(false);
+                    .HasMaxLength(30);
 
                 entity.Property(e => e.Identidade)
                     .IsRequired()
@@ -200,6 +203,36 @@ namespace Core
                     .HasConstraintName("fk_Aula_Aluno_Aula");
             });
 
+            modelBuilder.Entity<Alunonotificacao>(entity =>
+            {
+                entity.HasKey(e => new { e.IdAluno, e.IdNotificacao })
+                    .HasName("PRIMARY");
+
+                entity.ToTable("alunonotificacao");
+
+                entity.HasIndex(e => e.IdAluno)
+                    .HasName("fk_AlunoNotificacao_Aluno1_idx");
+
+                entity.HasIndex(e => e.IdNotificacao)
+                    .HasName("fk_AlunoNotificacao_Notificacao1_idx");
+
+                entity.Property(e => e.IdAluno).HasColumnName("idAluno");
+
+                entity.Property(e => e.IdNotificacao).HasColumnName("idNotificacao");
+
+                entity.HasOne(d => d.IdAlunoNavigation)
+                    .WithMany(p => p.Alunonotificacao)
+                    .HasForeignKey(d => d.IdAluno)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_AlunoNotificacao_Aluno1");
+
+                entity.HasOne(d => d.IdNotificacaoNavigation)
+                    .WithMany(p => p.Alunonotificacao)
+                    .HasForeignKey(d => d.IdNotificacao)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_AlunoNotificacao_Notificacao1");
+            });
+
             modelBuilder.Entity<Alunopessoaresponsavel>(entity =>
             {
                 entity.HasKey(e => new { e.IdPessoa, e.IdAluno })
@@ -256,6 +289,12 @@ namespace Core
                 entity.Property(e => e.Data).HasColumnName("data");
 
                 entity.Property(e => e.IdProfessorTurmaDisciplina).HasColumnName("idProfessorTurmaDisciplina");
+
+                entity.HasOne(d => d.IdProfessorTurmaDisciplinaNavigation)
+                    .WithMany(p => p.Aula)
+                    .HasForeignKey(d => d.IdProfessorTurmaDisciplina)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_Aula_ProfessorTurmaDisciplina1");
             });
 
             modelBuilder.Entity<Avaliacao>(entity =>
@@ -288,16 +327,73 @@ namespace Core
                     .HasForeignKey(d => d.IdAluno)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_Avaliacao_Aluno1");
+
+                entity.HasOne(d => d.IdProfessorTurmaDisciplinaNavigation)
+                    .WithMany(p => p.Avaliacao)
+                    .HasForeignKey(d => d.IdProfessorTurmaDisciplina)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_Avaliacao_ProfessorTurmaDisciplina1");
+            });
+
+            modelBuilder.Entity<Boletim>(entity =>
+            {
+                entity.HasKey(e => e.IdBoletim)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("boletim");
+
+                entity.HasIndex(e => e.Ano)
+                    .HasName("ano_UNIQUE")
+                    .IsUnique();
+
+                entity.HasIndex(e => e.IdAluno)
+                    .HasName("fk_Boletim_Aluno1_idx");
+
+                entity.HasIndex(e => e.Semestre)
+                    .HasName("semestre_UNIQUE")
+                    .IsUnique();
+
+                entity.Property(e => e.IdBoletim).HasColumnName("idBoletim");
+
+                entity.Property(e => e.Ano).HasColumnName("ano");
+
+                entity.Property(e => e.IdAluno).HasColumnName("idAluno");
+
+                entity.Property(e => e.Semestre).HasColumnName("semestre");
+
+                entity.HasOne(d => d.IdAlunoNavigation)
+                    .WithMany(p => p.Boletim)
+                    .HasForeignKey(d => d.IdAluno)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_Boletim_Aluno1");
             });
 
             modelBuilder.Entity<Cidade>(entity =>
             {
-                entity.HasKey(e => e.CodIbge)
+                entity.HasKey(e => e.IdCidade)
                     .HasName("PRIMARY");
 
                 entity.ToTable("cidade");
 
+                entity.HasIndex(e => e.CodIbge)
+                    .HasName("codIBGE_UNIQUE")
+                    .IsUnique();
+
+                entity.Property(e => e.IdCidade).HasColumnName("idCidade");
+
                 entity.Property(e => e.CodIbge).HasColumnName("codIBGE");
+
+                entity.Property(e => e.Estado)
+                    .IsRequired()
+                    .HasColumnName("estado")
+                    .HasMaxLength(45)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Nome)
+                    .IsRequired()
+                    .HasColumnName("nome")
+                    .HasMaxLength(45)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Diahora>(entity =>
@@ -341,6 +437,12 @@ namespace Core
                     .HasForeignKey(d => d.IdDiaHora)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_DiaHoraProfessorTurmaDisciplina_DiaHora1");
+
+                entity.HasOne(d => d.IdProfessorTurmaDisciplinaNavigation)
+                    .WithMany(p => p.Diahoraprofessorturmadisciplina)
+                    .HasForeignKey(d => d.IdProfessorTurmaDisciplina)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_DiaHoraProfessorTurmaDisciplina_ProfessorTurmaDisciplina1");
             });
 
             modelBuilder.Entity<Disciplina>(entity =>
@@ -433,6 +535,7 @@ namespace Core
 
                 entity.HasOne(d => d.CodIbgeNavigation)
                     .WithMany(p => p.Escola)
+                    .HasPrincipalKey(p => p.CodIbge)
                     .HasForeignKey(d => d.CodIbge)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_Escola_Cidade1");
@@ -442,6 +545,47 @@ namespace Core
                     .HasForeignKey(d => d.IdDiretor)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_Escola_Pessoa1");
+            });
+
+            modelBuilder.Entity<Notificacao>(entity =>
+            {
+                entity.HasKey(e => e.IdNotificacao)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("notificacao");
+
+                entity.HasIndex(e => e.IdNotificacao)
+                    .HasName("idNotificacao_UNIQUE")
+                    .IsUnique();
+
+                entity.Property(e => e.IdNotificacao).HasColumnName("idNotificacao");
+
+                entity.Property(e => e.Descricao)
+                    .HasColumnName("descricao")
+                    .HasMaxLength(150)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.NotificaAluno).HasColumnName("notificaAluno");
+
+                entity.Property(e => e.NotificaProfessor).HasColumnName("notificaProfessor");
+
+                entity.Property(e => e.NotificaResponsavel).HasColumnName("notificaResponsavel");
+
+                entity.Property(e => e.Prioridade)
+                    .HasColumnName("prioridade")
+                    .HasMaxLength(45)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Remetente)
+                    .HasColumnName("remetente")
+                    .HasMaxLength(45)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Titulo)
+                    .IsRequired()
+                    .HasColumnName("titulo")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Pessoa>(entity =>
@@ -553,6 +697,83 @@ namespace Core
                     .HasColumnType("enum('Diretor','Secretario','Professor','Responsavel')");
             });
 
+            modelBuilder.Entity<Pessoanotificacao>(entity =>
+            {
+                entity.HasKey(e => new { e.IdPessoa, e.IdNotificacao })
+                    .HasName("PRIMARY");
+
+                entity.ToTable("pessoanotificacao");
+
+                entity.HasIndex(e => e.IdNotificacao)
+                    .HasName("fk_PessoaNotificacao_Notificacao1_idx");
+
+                entity.HasIndex(e => e.IdPessoa)
+                    .HasName("fk_PessoaNotificacao_Pessoa1_idx");
+
+                entity.Property(e => e.IdPessoa).HasColumnName("idPessoa");
+
+                entity.Property(e => e.IdNotificacao).HasColumnName("idNotificacao");
+
+                entity.HasOne(d => d.IdNotificacaoNavigation)
+                    .WithMany(p => p.Pessoanotificacao)
+                    .HasForeignKey(d => d.IdNotificacao)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_PessoaNotificacao_Notificacao1");
+
+                entity.HasOne(d => d.IdPessoaNavigation)
+                    .WithMany(p => p.Pessoanotificacao)
+                    .HasForeignKey(d => d.IdPessoa)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_PessoaNotificacao_Pessoa1");
+            });
+
+            modelBuilder.Entity<Professorturmadisciplina>(entity =>
+            {
+                entity.HasKey(e => e.IdProfessorTurmaDisciplina)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("professorturmadisciplina");
+
+                entity.HasIndex(e => e.IdDisciplina)
+                    .HasName("fk_ProfessorTurmaDisciplina_Disciplina1_idx");
+
+                entity.HasIndex(e => e.IdProfessor)
+                    .HasName("fk_ProfessorTurmaDisciplina_Pessoa1_idx");
+
+                entity.HasIndex(e => e.IdTurma)
+                    .HasName("fk_ProfessorTurmaDisciplina_Turma1_idx");
+
+                entity.HasIndex(e => new { e.IdDisciplina, e.IdProfessor, e.IdTurma })
+                    .HasName("ProfessorTurmaDisciplina_UNIQUE")
+                    .IsUnique();
+
+                entity.Property(e => e.IdProfessorTurmaDisciplina).HasColumnName("idProfessorTurmaDisciplina");
+
+                entity.Property(e => e.IdDisciplina).HasColumnName("idDisciplina");
+
+                entity.Property(e => e.IdProfessor).HasColumnName("idProfessor");
+
+                entity.Property(e => e.IdTurma).HasColumnName("idTurma");
+
+                entity.HasOne(d => d.IdDisciplinaNavigation)
+                    .WithMany(p => p.Professorturmadisciplina)
+                    .HasForeignKey(d => d.IdDisciplina)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_ProfessorTurmaDisciplina_Disciplina1");
+
+                entity.HasOne(d => d.IdProfessorNavigation)
+                    .WithMany(p => p.Professorturmadisciplina)
+                    .HasForeignKey(d => d.IdProfessor)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_ProfessorTurmaDisciplina_Pessoa1");
+
+                entity.HasOne(d => d.IdTurmaNavigation)
+                    .WithMany(p => p.Professorturmadisciplina)
+                    .HasForeignKey(d => d.IdTurma)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_ProfessorTurmaDisciplina_Turma1");
+            });
+
             modelBuilder.Entity<Turma>(entity =>
             {
                 entity.HasKey(e => e.IdTurma)
@@ -618,29 +839,6 @@ namespace Core
                     .HasForeignKey(d => d.IdTurma)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_Turma_Aluno_Turma1");
-            });
-
-            modelBuilder.Entity<Notificacao>(entity =>
-            {
-                entity.HasKey(p => p.idNotificacao);
-                entity.HasIndex(p => p.idNotificacao);
-                entity.Property(p => p.titulo)
-                      .HasMaxLength(50)
-                      .IsRequired();
-
-                entity.Property(p => p.descricao)
-                      .HasMaxLength(150);
-
-                entity.Property(p => p.prioridade)
-                      .HasMaxLength(45);
-
-                entity.Property(p => p.remetente)
-                      .HasMaxLength(45);
-
-
-                entity.Property(p => p.notificaProfessor);
-                   
-                entity.Property(p => p.notificaResponsavel);
             });
 
             OnModelCreatingPartial(modelBuilder);
