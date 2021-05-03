@@ -51,6 +51,8 @@ namespace SiCAEWeb
             services.AddTransient<INotificacaoService, NotificacaoService>();
             // Cidade
             services.AddTransient<ICidadeService, CidadeService>();
+            //Aula
+            services.AddTransient<IAulaService, AulaService>();
             // Mapeando tudo
             services.AddAutoMapper(typeof(Startup).Assembly);
         }
