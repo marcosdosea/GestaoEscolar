@@ -30,6 +30,7 @@ namespace Core
         public virtual DbSet<Notificacao> Notificacao { get; set; }
         public virtual DbSet<Pessoa> Pessoa { get; set; }
         public virtual DbSet<Pessoanotificacao> Pessoanotificacao { get; set; }
+        public virtual DbSet<Professorturmadisciplina> Professorturmadisciplina { get; set; }
         public virtual DbSet<Turma> Turma { get; set; }
         public virtual DbSet<TurmaAluno> TurmaAluno { get; set; }
 
@@ -288,6 +289,12 @@ namespace Core
                 entity.Property(e => e.Data).HasColumnName("data");
 
                 entity.Property(e => e.IdProfessorTurmaDisciplina).HasColumnName("idProfessorTurmaDisciplina");
+
+                entity.HasOne(d => d.IdProfessorTurmaDisciplinaNavigation)
+                    .WithMany(p => p.Aula)
+                    .HasForeignKey(d => d.IdProfessorTurmaDisciplina)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_Aula_ProfessorTurmaDisciplina1");
             });
 
             modelBuilder.Entity<Avaliacao>(entity =>
@@ -320,6 +327,12 @@ namespace Core
                     .HasForeignKey(d => d.IdAluno)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_Avaliacao_Aluno1");
+
+                entity.HasOne(d => d.IdProfessorTurmaDisciplinaNavigation)
+                    .WithMany(p => p.Avaliacao)
+                    .HasForeignKey(d => d.IdProfessorTurmaDisciplina)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_Avaliacao_ProfessorTurmaDisciplina1");
             });
 
             modelBuilder.Entity<Boletim>(entity =>
@@ -424,6 +437,12 @@ namespace Core
                     .HasForeignKey(d => d.IdDiaHora)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_DiaHoraProfessorTurmaDisciplina_DiaHora1");
+
+                entity.HasOne(d => d.IdProfessorTurmaDisciplinaNavigation)
+                    .WithMany(p => p.Diahoraprofessorturmadisciplina)
+                    .HasForeignKey(d => d.IdProfessorTurmaDisciplina)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_DiaHoraProfessorTurmaDisciplina_ProfessorTurmaDisciplina1");
             });
 
             modelBuilder.Entity<Disciplina>(entity =>
@@ -706,6 +725,53 @@ namespace Core
                     .HasForeignKey(d => d.IdPessoa)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_PessoaNotificacao_Pessoa1");
+            });
+
+            modelBuilder.Entity<Professorturmadisciplina>(entity =>
+            {
+                entity.HasKey(e => e.IdProfessorTurmaDisciplina)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("professorturmadisciplina");
+
+                entity.HasIndex(e => e.IdDisciplina)
+                    .HasName("fk_ProfessorTurmaDisciplina_Disciplina1_idx");
+
+                entity.HasIndex(e => e.IdProfessor)
+                    .HasName("fk_ProfessorTurmaDisciplina_Pessoa1_idx");
+
+                entity.HasIndex(e => e.IdTurma)
+                    .HasName("fk_ProfessorTurmaDisciplina_Turma1_idx");
+
+                entity.HasIndex(e => new { e.IdDisciplina, e.IdProfessor, e.IdTurma })
+                    .HasName("ProfessorTurmaDisciplina_UNIQUE")
+                    .IsUnique();
+
+                entity.Property(e => e.IdProfessorTurmaDisciplina).HasColumnName("idProfessorTurmaDisciplina");
+
+                entity.Property(e => e.IdDisciplina).HasColumnName("idDisciplina");
+
+                entity.Property(e => e.IdProfessor).HasColumnName("idProfessor");
+
+                entity.Property(e => e.IdTurma).HasColumnName("idTurma");
+
+                entity.HasOne(d => d.IdDisciplinaNavigation)
+                    .WithMany(p => p.Professorturmadisciplina)
+                    .HasForeignKey(d => d.IdDisciplina)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_ProfessorTurmaDisciplina_Disciplina1");
+
+                entity.HasOne(d => d.IdProfessorNavigation)
+                    .WithMany(p => p.Professorturmadisciplina)
+                    .HasForeignKey(d => d.IdProfessor)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_ProfessorTurmaDisciplina_Pessoa1");
+
+                entity.HasOne(d => d.IdTurmaNavigation)
+                    .WithMany(p => p.Professorturmadisciplina)
+                    .HasForeignKey(d => d.IdTurma)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_ProfessorTurmaDisciplina_Turma1");
             });
 
             modelBuilder.Entity<Turma>(entity =>
