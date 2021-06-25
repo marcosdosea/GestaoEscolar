@@ -41,9 +41,9 @@ namespace Service
                         select aluno;
             return query;
         }
-        public int GetHorarios()
+        public int GetAlunos()
         {
-            return _context.Diahora.Count();
+            return _context.Aluno.Count();
         }
         public Aluno Obter(int idAluno)
         {

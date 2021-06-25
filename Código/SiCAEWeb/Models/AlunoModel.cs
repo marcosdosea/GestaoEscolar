@@ -25,9 +25,9 @@ namespace SiCAEWeb.Models
         public string NomeSocial { get; set; }
 
         [Display(Name = "Data de Nascimento")]
-        [DataType(DataType.Date, ErrorMessage = "Data válida requerida!")]
+        [DataType(DataType.DateTime, ErrorMessage = "Data válida requerida!")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
-        public string DataNascimento { get; set; }
+        public DateTime DataNascimento { get; set; }
 
         [Display(Name = "CPF")]
         [StringLength(11, MinimumLength = 11, ErrorMessage = "Conferir dígitos do CPF")]
@@ -88,8 +88,7 @@ namespace SiCAEWeb.Models
         [StringLength(5, MinimumLength = 4, ErrorMessage = "Conferir o número do imóvel")]
         public string NumeroImovel { get; set; }
         
-        
-        
+
 
 
 
