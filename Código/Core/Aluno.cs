@@ -21,7 +21,7 @@ namespace Core
         public string Cpf { get; set; }
         public string Rua { get; set; }
         public string Cep { get; set; }
-        public byte[] Email { get; set; }
+        public string Email { get; set; }
         public string Cidade { get; set; }
         public string ProcedenciaEscolar { get; set; }
         public string Nacionalidade { get; set; }
