@@ -370,7 +370,7 @@ namespace Core
 
             modelBuilder.Entity<Cidade>(entity =>
             {
-                entity.HasKey(e => e.IdCidade)
+                entity.HasKey(e => e.idCidade)
                     .HasName("PRIMARY");
 
                 entity.ToTable("cidade");
@@ -379,7 +379,7 @@ namespace Core
                     .HasName("codIBGE_UNIQUE")
                     .IsUnique();
 
-                entity.Property(e => e.IdCidade).HasColumnName("idCidade");
+                entity.Property(e => e.idCidade).HasColumnName("idCidade");
 
                 entity.Property(e => e.CodIbge).HasColumnName("codIBGE");
 

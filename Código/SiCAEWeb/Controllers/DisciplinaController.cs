@@ -82,7 +82,7 @@ namespace SiCAEWeb.Controllers
         // GET: DisciplinaController/Delete/5
         public ActionResult Delete(int id)
         {
-            Disciplina disciplina = _disciplinaService.Buscar(id);
+            Disciplina disciplina = _disciplinaService.Obter(id);
             DisciplinaModel disciplinaModel = _mapper.Map<DisciplinaModel>(disciplina);
             return View(disciplinaModel);
         }
@@ -90,7 +90,7 @@ namespace SiCAEWeb.Controllers
         // POST: DisciplinaController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, DisciplinaModel disciplinaModel)
         {
             _disciplinaService.Remover(id);
             return RedirectToAction(nameof(Index));

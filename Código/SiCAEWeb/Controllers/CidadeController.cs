@@ -90,7 +90,7 @@ namespace SiCAEWeb.Controllers
         // POST: CidadeController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, CidadeModel cidadeModel)
         {
             _cidadeService.Remover(id);
             return RedirectToAction(nameof(Index));

@@ -6,7 +6,6 @@ namespace Core.Service
 {
     public interface IDisciplinaService
     {
-        Disciplina Buscar(int idDisciplina);
         int Inserir(Disciplina disciplina);
         void Editar(Disciplina disciplina);
         IEnumerable<Disciplina> ObterPorNome(string nome);
