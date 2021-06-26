@@ -10,7 +10,7 @@ namespace Core
             Escola = new HashSet<Escola>();
         }
 
-        public int IdCidade { get; set; }
+        public int idCidade { get; set; }
         public int CodIbge { get; set; }
         public string Nome { get; set; }
         public string Estado { get; set; }

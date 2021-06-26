@@ -24,15 +24,10 @@ namespace Service
                         select disciplina;
             return query;
         }
-        public Disciplina Buscar(int idDisciplina)
-        {
-            IEnumerable<Disciplina> disciplina = GetQuery()
-                .Where(disciplina => disciplina.Nome.Equals(idDisciplina));
-            return disciplina.FirstOrDefault();
-        }
         public Disciplina Obter(int idDisciplina)
         {
-            IEnumerable<Disciplina> disciplinas = GetQuery().Where(disciplinaModel => disciplinaModel.IdDisciplina.Equals(idDisciplina));
+            IEnumerable<Disciplina> disciplinas = GetQuery()
+                .Where(disciplinaModel => disciplinaModel.IdDisciplina.Equals(idDisciplina));
 
             return disciplinas.ElementAtOrDefault(0);
         }

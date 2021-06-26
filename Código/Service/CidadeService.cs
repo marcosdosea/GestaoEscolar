@@ -21,7 +21,7 @@ namespace Service
         {
             _context.Add(cidade);
             _context.SaveChanges();
-            return cidade.IdCidade;
+            return cidade.idCidade;
         }
         public void Editar(Cidade cidade)
         {
@@ -43,7 +43,7 @@ namespace Service
         }
         public Cidade Obter(int idCidade)
         {
-            IEnumerable<Cidade> cidades = GetQuery().Where(cidadeModel => cidadeModel.IdCidade.Equals(idCidade));
+            IEnumerable<Cidade> cidades = GetQuery().Where(cidadeModel => cidadeModel.idCidade.Equals(idCidade));
 
             return cidades.ElementAtOrDefault(0);
         }
