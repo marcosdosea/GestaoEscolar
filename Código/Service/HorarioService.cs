@@ -64,11 +64,17 @@ namespace Service
             return GetQuery();
         }
 
+
+        /// <summary>
+        /// Obtém autores ordenado de forma descendente
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <returns></returns>
         public IEnumerable<HorarioDTO> ObterPorNomeOrdenadoDescending(string nome)
         {
-            IQueryable<Diahora> tb_diahora = _context.Diahora;
-            var query = from diahora in tb_diahora
-                        where nome.StartsWith(nome)
+            //IQueryable<Diahora> tb_diahora = _context.Diahora;
+            var query = from diahora in _context.Diahora
+                        where diahora.DiaSemana.StartsWith(nome)
                         orderby diahora.DiaSemana descending
                         select new HorarioDTO
                         {

@@ -66,8 +66,8 @@ namespace Service
 
         public IEnumerable<AlunoDTO> ObterPorNomeOrdenadoDescending(string nome)
         {
-            IQueryable<Aluno> tb_aluno = _context.Aluno;
-            var query = from aluno in tb_aluno
+            //IQueryable<Aluno> tb_aluno = _context.Aluno;
+            var query = from aluno in _context.Aluno
                         where nome.StartsWith(nome)
                         orderby aluno.Nome descending
                         select new AlunoDTO
