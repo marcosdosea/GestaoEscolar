@@ -43,17 +43,15 @@ namespace SiCAEWeb.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required(ErrorMessage = "Insira seu e-mail")]
+            [Required]
             [EmailAddress]
-            [Display(Name = "E-mail")]
             public string Email { get; set; }
 
-            [Required(ErrorMessage = "Insira sua senha")]
+            [Required]
             [DataType(DataType.Password)]
-            [Display(Name = "Senha")]
             public string Password { get; set; }
 
-            [Display(Name = "Lembrar de mim")]
+            [Display(Name = "Remember me?")]
             public bool RememberMe { get; set; }
         }
 
@@ -87,7 +85,7 @@ namespace SiCAEWeb.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("Usuário já está logado.");
+                    _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)
@@ -96,12 +94,12 @@ namespace SiCAEWeb.Areas.Identity.Pages.Account
                 }
                 if (result.IsLockedOut)
                 {
-                    _logger.LogWarning("Usuário bloqueado.");
+                    _logger.LogWarning("User account locked out.");
                     return RedirectToPage("./Lockout");
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "E-mail ou senha inválidos.");
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
                     return Page();
                 }
             }
