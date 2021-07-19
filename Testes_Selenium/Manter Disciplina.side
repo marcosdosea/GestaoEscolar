@@ -1,0 +1,490 @@
+{
+  "id": "5a8eddd7-bf8d-4043-8f5c-ca0add286e11",
+  "version": "2.0",
+  "name": "Manter Disciplina [v1]&nbsp;",
+  "url": "https://localhost:44357",
+  "tests": [{
+    "id": "573133dc-e48a-40ba-8ca3-a16932970ce8",
+    "name": "Inserir Disciplina Válida [v1]",
+    "commands": [{
+      "id": "db744f4d-1b12-4aac-a6c9-8f536ec7a8bf",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d7f9129-6fda-491a-89c5-aca9f53fb094",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "866x588",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b9cc226-506a-4777-9470-af2b46a87f61",
+      "comment": "",
+      "command": "click",
+      "target": "id=open",
+      "targets": [
+        ["id=open", "id"],
+        ["css=#open", "css:finder"],
+        ["xpath=//i[@id='open']", "xpath:attributes"],
+        ["xpath=//div[@id='top']/div/div/i", "xpath:idRelative"],
+        ["xpath=//div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8cac41f-b3c1-453c-aa81-5c5f75b1c037",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w3-block:nth-child(3)",
+      "targets": [
+        ["css=.w3-block:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick='menu_Dir()']", "xpath:attributes"],
+        ["xpath=//div[@id='mySidenav']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,' Diretor')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "975309a8-bb6e-4d4a-9499-5b491a0d8827",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Disciplinas",
+      "targets": [
+        ["linkText=Disciplinas", "linkText"],
+        ["css=#acc_Dir > .w3-bar-item:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Disciplinas')]", "xpath:link"],
+        ["xpath=//div[@id='acc_Dir']/a[5]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/disciplina')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,' Disciplinas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8fc1962-7f75-4f8c-951f-6f6c0ddfce1b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Novo",
+      "targets": [
+        ["linkText=Novo", "linkText"],
+        ["css=.col-12 > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Novo')]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Disciplina/Create')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ee0112a-30d3-4983-a065-80b9d8b13c56",
+      "comment": "",
+      "command": "click",
+      "target": "id=Nome",
+      "targets": [
+        ["id=Nome", "id"],
+        ["name=Nome", "name"],
+        ["css=#Nome", "css:finder"],
+        ["xpath=//input[@id='Nome']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div[3]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1c01412-4038-4db6-82f0-14fd959928c0",
+      "comment": "",
+      "command": "click",
+      "target": "id=Nome",
+      "targets": [
+        ["id=Nome", "id"],
+        ["name=Nome", "name"],
+        ["css=#Nome", "css:finder"],
+        ["xpath=//input[@id='Nome']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div[3]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "14acf4ff-59fb-4d04-82ce-1a7be0238237",
+      "comment": "",
+      "command": "type",
+      "target": "id=Nome",
+      "targets": [
+        ["id=Nome", "id"],
+        ["name=Nome", "name"],
+        ["css=#Nome", "css:finder"],
+        ["xpath=//input[@id='Nome']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div[3]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Biologia"
+    }, {
+      "id": "81d0b734-7def-400f-b21f-9effe5d39d3c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(3)",
+      "targets": [
+        ["css=.row:nth-child(3)", "css:finder"],
+        ["xpath=//main[@id='main']/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a302c4d1-c383-44ba-8169-4e0f7f230b32",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(1)",
+      "targets": [
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Salvar']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div[3]/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "92bd477a-0d65-4883-a492-82cc4afade4d",
+    "name": "Inserir Disciplina Inválida [v1]",
+    "commands": [{
+      "id": "a4e32499-afa0-4381-88ce-ea5cf8bd099e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e2bc73fb-79c0-4d13-bc6c-35867d9f614d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "866x588",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ba1e62b-b578-4e28-be02-37b03eeb514f",
+      "comment": "",
+      "command": "click",
+      "target": "id=open",
+      "targets": [
+        ["id=open", "id"],
+        ["css=#open", "css:finder"],
+        ["xpath=//i[@id='open']", "xpath:attributes"],
+        ["xpath=//div[@id='top']/div/div/i", "xpath:idRelative"],
+        ["xpath=//div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "029995ad-7be6-462c-9c61-74841ec67596",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w3-block:nth-child(3)",
+      "targets": [
+        ["css=.w3-block:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick='menu_Dir()']", "xpath:attributes"],
+        ["xpath=//div[@id='mySidenav']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,' Diretor')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b958924-0c7d-4fac-b3a6-af14aaaec630",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Disciplinas",
+      "targets": [
+        ["linkText=Disciplinas", "linkText"],
+        ["css=#acc_Dir > .w3-bar-item:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Disciplinas')]", "xpath:link"],
+        ["xpath=//div[@id='acc_Dir']/a[5]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/disciplina')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,' Disciplinas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "13fd6358-c421-4c06-a02e-a6d903fffd06",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Novo",
+      "targets": [
+        ["linkText=Novo", "linkText"],
+        ["css=.col-12 > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Novo')]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Disciplina/Create')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "74d614f2-39cb-4ddf-a0b3-7557b69fd46b",
+      "comment": "",
+      "command": "click",
+      "target": "id=Nome",
+      "targets": [
+        ["id=Nome", "id"],
+        ["name=Nome", "name"],
+        ["css=#Nome", "css:finder"],
+        ["xpath=//input[@id='Nome']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div[3]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f238247-74fd-4c1c-a416-d383d0d6cd5e",
+      "comment": "",
+      "command": "type",
+      "target": "id=Nome",
+      "targets": [
+        ["id=Nome", "id"],
+        ["name=Nome", "name"],
+        ["css=#Nome", "css:finder"],
+        ["xpath=//input[@id='Nome']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div[3]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "#Biologia"
+    }, {
+      "id": "48e69f43-10de-4cc4-b37b-9c04d8b1fdab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(1)",
+      "targets": [
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Salvar']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div[3]/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6dcfbc56-180e-4576-ac9c-05dd09e3b7eb",
+    "name": "Alterar Disciplina Válida",
+    "commands": [{
+      "id": "9ddef5c2-7169-47af-bbfc-8e64d5c99b6d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d0306235-9e2c-4283-8472-1cf001ee7dc7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "866x588",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "329fba73-0ee7-4b2e-b0c7-06b3d795aa6f",
+      "comment": "",
+      "command": "click",
+      "target": "id=open",
+      "targets": [
+        ["id=open", "id"],
+        ["css=#open", "css:finder"],
+        ["xpath=//i[@id='open']", "xpath:attributes"],
+        ["xpath=//div[@id='top']/div/div/i", "xpath:idRelative"],
+        ["xpath=//div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55fe94dc-1825-47e3-a9ea-3a00e2781e13",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w3-block:nth-child(3)",
+      "targets": [
+        ["css=.w3-block:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick='menu_Dir()']", "xpath:attributes"],
+        ["xpath=//div[@id='mySidenav']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,' Diretor')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b13be6fb-0173-43db-9cd0-69963393ca49",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Disciplinas",
+      "targets": [
+        ["linkText=Disciplinas", "linkText"],
+        ["css=#acc_Dir > .w3-bar-item:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Disciplinas')]", "xpath:link"],
+        ["xpath=//div[@id='acc_Dir']/a[5]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/disciplina')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,' Disciplinas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "14734ffd-26cd-4bef-939d-9edcef8b9c0a",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(3) .btn:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(3) .btn:nth-child(2)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Alterar')])[3]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/div/div[3]/div/table/tbody/tr[3]/td[3]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Disciplina/Edit/3')]", "xpath:href"],
+        ["xpath=//tr[3]/td[3]/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dec79a55-249b-495a-b577-6d1ffb1218da",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ecdcf447-9c79-41f6-8706-971a2071fbaa",
+      "comment": "",
+      "command": "type",
+      "target": "id=Nome",
+      "targets": [
+        ["id=Nome", "id"],
+        ["name=Nome", "name"],
+        ["css=#Nome", "css:finder"],
+        ["xpath=//input[@id='Nome']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div[3]/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Ciências"
+    }, {
+      "id": "160c9db9-6cc3-49b8-af22-58f061922f0f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(1)",
+      "targets": [
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Salvar']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div[3]/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "40cff8d2-6b1a-4700-b843-cb7ac5484ce5",
+    "name": "Alterar Disciplina Inválida [v1]",
+    "commands": [{
+      "id": "04977c9b-b31a-4a5b-9d47-d20a78a246b8",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aca6c327-f731-4ccd-a70a-3f9309499cb1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "866x588",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83f558b9-bc3a-49e1-8b33-176c679b0b40",
+      "comment": "",
+      "command": "click",
+      "target": "id=open",
+      "targets": [
+        ["id=open", "id"],
+        ["css=#open", "css:finder"],
+        ["xpath=//i[@id='open']", "xpath:attributes"],
+        ["xpath=//div[@id='top']/div/div/i", "xpath:idRelative"],
+        ["xpath=//div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0433ff9c-fc7d-4548-a77b-06f81613e28f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w3-block:nth-child(3)",
+      "targets": [
+        ["css=.w3-block:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick='menu_Dir()']", "xpath:attributes"],
+        ["xpath=//div[@id='mySidenav']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,' Diretor')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee13f05f-a42e-4f53-aced-27083a6f8655",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Disciplinas",
+      "targets": [
+        ["linkText=Disciplinas", "linkText"],
+        ["css=#acc_Dir > .w3-bar-item:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Disciplinas')]", "xpath:link"],
+        ["xpath=//div[@id='acc_Dir']/a[5]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/disciplina')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,' Disciplinas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a86e38b-05f8-4828-9437-e0a669463511",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(3) .btn:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(3) .btn:nth-child(2)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Alterar')])[3]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/div/div[3]/div/table/tbody/tr[3]/td[3]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Disciplina/Edit/3')]", "xpath:href"],
+        ["xpath=//tr[3]/td[3]/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "00b2a2ff-e4d5-4a7c-b049-9837b5a72f22",
+      "comment": "",
+      "command": "click",
+      "target": "id=Nome",
+      "targets": [
+        ["id=Nome", "id"],
+        ["name=Nome", "name"],
+        ["css=#Nome", "css:finder"],
+        ["xpath=//input[@id='Nome']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div[3]/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e9d7c58-2661-474b-a9c0-8120a1075f19",
+      "comment": "",
+      "command": "type",
+      "target": "id=Nome",
+      "targets": [
+        ["id=Nome", "id"],
+        ["name=Nome", "name"],
+        ["css=#Nome", "css:finder"],
+        ["xpath=//input[@id='Nome']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div[3]/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "%Ciências"
+    }, {
+      "id": "98298d2c-24ba-4083-b1b4-8f91130c7115",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(1)",
+      "targets": [
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Salvar']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div[3]/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "627547b4-66ad-45fd-a67a-793535342661",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["573133dc-e48a-40ba-8ca3-a16932970ce8"]
+  }],
+  "urls": ["https://localhost:44357/"],
+  "plugins": []
+}
